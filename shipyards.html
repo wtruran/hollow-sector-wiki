@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ship Yards — Hollow Sector Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Wiki</a> / Mechanics</div>
+      <h1>Ship Yards</h1>
+      <p class="subtitle">Expanding your network — purchasing yards and upgrading stations.</p>
+    </div>
+
+    <h2>What is a Ship Yard?</h2>
+    <p>A ship yard is a facility you own at a station. Your starting home base comes with one. Additional yards can be purchased at any other station for <strong>ƒ200,000</strong>.</p>
+    <p>Owning a yard at a station lets you:</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li>Store mined materials there (ships can return to any owned yard)</li>
+      <li>Sell materials at that station's market prices</li>
+      <li>Dispatch transfer runs to move inventory between yards</li>
+      <li>Access that station's local market rates</li>
+      <li>Purchase station upgrades (Refinery, Drone Bay)</li>
+    </ul>
+
+    <h2>Purchasing a Yard</h2>
+    <p>On the <strong>Map</strong>, tap any station you don't already own. If you have at least ƒ200,000 and no outstanding lien, the "Purchase Ship Yard" button will be active. The purchase is instant.</p>
+
+    <div class="callout">
+      <strong>You must have zero lien to purchase a yard.</strong> Pay off any outstanding insurance debt first.
+    </div>
+
+    <h2>Transfer Runs</h2>
+    <p>Once you have two or more yards, you can transfer materials between them. Open the home base or a yard station and select the transfer option. Assign a freight ship to carry the cargo.</p>
+    <p>Transfer runs carry piracy risk based on cargo value:</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li>ƒ0–15,000 in cargo → Risk 0</li>
+      <li>Increases by 1 per ƒ15,000 of cargo value</li>
+      <li>Capped at Risk 7</li>
+    </ul>
+    <p>Assign escorts accordingly. A fully laden rare-material transfer is worth assigning a strong fighter.</p>
+
+    <h2>Station Upgrades</h2>
+    <p>Your home base and any owned ship yard can be upgraded by tapping the station on the <strong>Map</strong>. Five upgrades are available:</p>
+
+    <table class="wiki-table">
+      <thead><tr><th>Upgrade</th><th>Cost</th><th>Effect</th></tr></thead>
+      <tbody>
+        <tr><td class="val">Salvage Scanner</td><td>ƒ5,000</td><td>Strands recoverable <a href="salvage.html">salvage</a> within 500 WU</td></tr>
+        <tr><td class="val">Base Defense</td><td>ƒ25,000</td><td>Protects runs near the station (750 WU)</td></tr>
+        <tr><td class="val">Cargo Scanner</td><td>ƒ40,000</td><td>Reveals NPC <a href="piracy.html">fleets</a> within 1,000 WU</td></tr>
+        <tr><td class="val">Refinery</td><td>ƒ50,000</td><td>Refines raw materials into higher-value goods</td></tr>
+        <tr><td class="val">Drone Bay</td><td>ƒ100,000</td><td>Autonomous, risk-free mining without ships</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Refinery — ƒ50,000</h3>
+    <p>A Refinery converts raw materials in storage into refined goods, which sell at higher base values. Each raw material has one refined product (see <a href="materials.html">Materials</a> for the full list).</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">To use:</strong> go to the station's Storage tab, select a raw material, choose a quantity, and confirm. The quantity selector shows the total refine cost and estimated time.</li>
+      <li><strong style="color:var(--white)">Cost:</strong> 10% of the raw material's base value per SU refined.</li>
+      <li><strong style="color:var(--white)">Refine time per SU:</strong> Common = 6 real seconds, Uncommon = 12 real seconds, Rare = 18 real seconds.</li>
+      <li>Each station's Refinery operates independently — you can run refineries at multiple yards simultaneously.</li>
+    </ul>
+
+    <table class="wiki-table">
+      <thead><tr><th>Tier</th><th>Refine Cost (ƒ/SU)</th><th>Refine Time (real sec/SU)</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge badge-common">Common</span></td><td>120</td><td>6s</td></tr>
+        <tr><td><span class="badge badge-uncommon">Uncommon</span></td><td>200</td><td>12s</td></tr>
+        <tr><td><span class="badge badge-rare">Rare</span></td><td>500</td><td>18s</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Drone Bay — ƒ100,000</h3>
+    <p>A Drone Bay deploys an autonomous fleet of mining drones from the station. Drones require no player-owned ship and bypass all piracy risk entirely.</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Setup:</strong> from the station's Upgrades tab, select a target asteroid and which material to collect. Drones loop continuously until you stop them.</li>
+      <li><strong style="color:var(--white)">Drones:</strong> cost <strong>ƒ5,000 each</strong>, maximum 10 per bay. Each drone carries 1 SU per trip.</li>
+      <li><strong style="color:var(--white)">Range:</strong> 500 WU — drones can only reach asteroids within 500 WU of their station.</li>
+      <li><strong style="color:var(--white)">Speed:</strong> 30 real minutes per 100 WU of travel.</li>
+      <li><strong style="color:var(--white)">Piracy:</strong> drones ignore all piracy risk — no escorts needed.</li>
+      <li>Each Drone Bay is per-station and independent of other bays or your player fleet.</li>
+    </ul>
+
+    <div class="callout teal">
+      On the map, active drones appear as a <span style="color:#9542C8">purple circle</span> traveling between their station and the target asteroid, with a faint dashed purple route line showing their path.
+    </div>
+
+    <h3>Salvage Scanner — ƒ5,000</h3>
+    <p>The cheapest upgrade and an easy early win. Once installed, the scanner periodically strands a modest cargo drop within <strong>500 WU</strong> of the station — a mix of ore and <a href="commodities.html">commodities</a> worth recovering with a freighter. See <a href="salvage.html">Salvage</a> for spawn rates, the 3-drop cap, and collection.</p>
+
+    <h3>Base Defense — ƒ25,000</h3>
+    <p>Installs a defensive perimeter around the station. Runs that pass within <strong>750 WU</strong> are shielded, reducing the danger your convoys face close to home — a cheap way to make a busy hub station safer.</p>
+
+    <h3>Cargo Scanner — ƒ40,000</h3>
+    <p>Reveals NPC freight fleets passing within <strong>1,000 WU</strong> of the station. Hidden fleets can't be targeted, so the Cargo Scanner is the prerequisite for <a href="piracy.html">piracy</a> — place one (or several) along busy trade lanes to spot fleets worth raiding.</p>
+
+    <h2>Strategy</h2>
+    <p>Multiple ship yards open up arbitrage opportunities. Market prices vary by station — a material at 80% of base at your home station might be at 125% at a distant yard. Transfer the inventory and pocket the difference.</p>
+    <p>Installing a Refinery before selling rare hauls is high-value: converting Rhodium (ƒ5,000/CU) to Rhodium Catalyst (ƒ6,000/CU) is a 20% gain minus the small refining fee.</p>
+    <p>Drone Bays are best placed at stations close to rich common-material asteroids — they generate a steady low-maintenance income stream without committing any player ships.</p>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

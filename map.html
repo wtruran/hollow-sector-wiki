@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map & Navigation — Hollow Sector Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb">Hollow Sector Wiki → Map & Navigation</div>
+      <h1>Map & Navigation</h1>
+      <p class="subtitle">A living system where every station, asteroid, and ship moves in real time.</p>
+    </div>
+
+    <div class="callout">
+      <strong>Nothing in Hollow Sector stands still.</strong> Planets orbit the sun, stations orbit their planets, asteroids drift through belts, and your ships travel between all of them — continuously, in real wall-clock time.
+    </div>
+
+    <h2>The Map View</h2>
+    <p>The map is the central view of the game. It shows the entire Kepler-11 system at a glance — the sun at the centre, six planets on their orbital paths, asteroid belts, stations, active ships, enemies, and drone runs, all updating live as you watch.</p>
+    <p>You can <strong>pan</strong> by clicking and dragging, and <strong>zoom</strong> with the scroll wheel or pinch gesture. Tap any object on the map to open its detail panel or modal.</p>
+
+    <h2>Real-Time Orbital Mechanics</h2>
+    <p>All positions in Hollow Sector are calculated from the real wall-clock time at the moment of rendering. There are no "turns" or discrete ticks for movement — every orbit is a continuous trigonometric calculation seeded by the current timestamp.</p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <div class="info-label">Planets</div>
+        <div class="info-value">Orbit the sun with periods ranging from <span class="val">1 real day</span> (Kepler-11b, closest) to <span class="val">7 real days</span> (Kepler-11g, outermost).</div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Planet-Orbit Stations</div>
+        <div class="info-value">Circle their parent planet once every <span class="val">1 real day</span>, carried along as the planet itself moves around the sun.</div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Sun-Orbit Stations</div>
+        <div class="info-value">Orbit the sun directly on the same path as a planet (co-orbital), or within a belt at their own radius. Periods match their orbital path.</div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Asteroids</div>
+        <div class="info-value">Planet-child asteroids orbit their planet once per <span class="val">1 real day</span>. Belt asteroids orbit the sun once every <span class="val">8 real days</span>.</div>
+      </div>
+    </div>
+
+    <div class="callout callout-tip">
+      Because everything orbits continuously, the distance between your station and a target asteroid changes throughout the day. A mine run dispatched now may have a different travel time than the same run launched six hours later. The game calculates the actual positions at dispatch time and locks in the route.
+    </div>
+
+    <h2>System Layout</h2>
+    <p>The Kepler-11 system spans roughly <strong>12,400 WU</strong> (World Units) from the sun's centre to the outer belt edge. Objects are arranged in concentric orbital bands:</p>
+
+    <table class="wiki-table">
+      <thead>
+        <tr><th>Zone</th><th>Orbital Radius (WU)</th><th>Period</th><th>Contents</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sun</td><td>— (centre)</td><td>—</td><td>Kepler-11 star; visualRadius 40 WU</td></tr>
+        <tr><td>Kepler-11b</td><td>985</td><td>1.0 real day</td><td>Planet + 3 stations</td></tr>
+        <tr><td>Kepler-11c</td><td>1,147</td><td>1.24 real days</td><td>Planet + 5 stations</td></tr>
+        <tr><td class="dim">Thin Belt (belt1)</td><td>1,334 – 1,534</td><td>8 real days</td><td>Asteroids + 2 sun-orbit stations</td></tr>
+        <tr><td>Kepler-11d</td><td>1,900</td><td>2.10 real days</td><td>Planet + 4 stations</td></tr>
+        <tr><td>Kepler-11e</td><td>2,900</td><td>2.67 real days</td><td>Planet + 3 stations</td></tr>
+        <tr><td>Kepler-11f</td><td>3,900</td><td>3.57 real days</td><td>Planet + 5 stations</td></tr>
+        <tr><td>Kepler-11g</td><td>5,000</td><td>7.0 real days</td><td>Planet + 5 stations</td></tr>
+        <tr><td class="dim">Outer Belt (belt2)</td><td>5,400 – 5,800</td><td>8 real days</td><td>Asteroids + 3 sun-orbit stations</td></tr>
+      </tbody>
+    </table>
+
+    <h2>What You See on the Map</h2>
+    <p>Every entity on the map has a distinct visual. Here is what each marker means:</p>
+
+    <table class="wiki-table">
+      <thead>
+        <tr><th>Marker</th><th>What it represents</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="badge" style="background:rgba(215,191,87,0.15);color:#D7BF57;border:1px solid #D7BF57">● Yellow circle</span></td>
+          <td>The <strong>sun</strong> (Kepler-11) at the centre of the system. Faint yellow fill with a solid stroke.</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:rgba(66,200,160,0.15);color:#42C8A0;border:1px solid #42C8A0">● Green circle</span></td>
+          <td>A <strong>planet</strong>. Six planets orbit the sun at increasing radii. Labels appear when zoomed in.</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:rgba(238,238,238,0.15);color:#EEE;border:1px solid #EEE">⊕ White crosshair</span></td>
+          <td>Your <strong>home base</strong> or an <strong>owned shipyard</strong> — drawn larger and in white. Tap to open the station modal.</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:rgba(125,168,242,0.15);color:#7DA8F2;border:1px solid #7DA8F2">⊕ Blue crosshair</span></td>
+          <td>Any other <strong>station</strong> in the sector. Smaller than owned stations. Tap to view its details.</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:rgba(189,125,102,0.15);color:#BD7D66;border:1px solid #BD7D66">⬡ Rust hexagon</span></td>
+          <td>An <strong>asteroid</strong>. Tap to open the mining dispatch panel.</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:rgba(238,238,238,0.15);color:#EEE;border:1px solid #EEE">■ Moving square</span></td>
+          <td>A <strong>ship in transit</strong> — traveling on a freight, defense, or mining run. A dashed line shows the planned route; a solid line shows the segment already covered. A small animated packet dot travels along the current leg.</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:rgba(221,63,63,0.15);color:#DD3F3F;border:1px solid #DD3F3F">▲ Red triangle</span></td>
+          <td>An <strong>enemy ship</strong>. Its danger radius is shown as a faint red glow. Routes passing through this radius are at risk of attack.</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:rgba(149,66,200,0.15);color:#9542C8;border:1px solid #9542C8">● Purple circle</span></td>
+          <td>An <strong>autonomous drone</strong> from a Drone Bay upgrade. Travels back and forth between its station and target asteroid continuously. A faint purple dashed line shows the route.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Orbital Drift & Planning</h2>
+    <p>Because orbits are continuous, two things are always true:</p>
+    <ul style="margin: 8px 0 16px 20px; color: var(--teal); line-height: 2;">
+      <li style="color:var(--white)"><strong>Departure time matters.</strong> The game uses a closest-approach search when you try to dispatch a ship, finding the departure window within the next few hours that minimises total travel time. You can accept the optimal window or depart immediately.</li>
+      <li style="color:var(--white)"><strong>Drone cycle times vary.</strong> Drones recalculate their travel time each cycle based on the current distance to their target asteroid. A drone assigned to a nearby asteroid early in the day may have a longer return trip hours later as the asteroid orbits away.</li>
+    </ul>
+
+    <h2>Distance Units (WU)</h2>
+    <p>All distances are measured in <strong>World Units (WU)</strong>. Ship speed is shown as <strong>real minutes per 100 WU</strong> — lower is faster. Real travel time = distance (WU) ÷ 100 × speed value. A ship with speed 10 crosses 100 WU in 10 real minutes, 250 WU in 25 real minutes, and so on.</p>
+
+    <table class="wiki-table">
+      <thead>
+        <tr><th>Example</th><th>Distance</th><th>Ship</th><th>Speed</th><th>Real travel time</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Inner system hop</td><td>100 WU</td><td>SF2000</td><td>10 real min / 100 WU</td><td>~10 real min</td></tr>
+        <tr><td>Mid-system freight</td><td>300 WU</td><td>SF1000</td><td>8 real min / 100 WU</td><td>~24 real min</td></tr>
+        <tr><td>Outer belt mining</td><td>800 WU</td><td>MN3000</td><td>5 real min / 100 WU</td><td>~40 real min (one way)</td></tr>
+        <tr><td>Drone cycle (round trip)</td><td>50 WU each way</td><td>Drone</td><td>30 real min / 100 WU</td><td>~30 real min round trip</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Timers & Refresh Cycles</h2>
+    <p>All in-game timers — ship travel, market refreshes, job board resets — run in real wall-clock time. The sector keeps moving while the app is closed, and the game <strong>catches up</strong> on everything that happened when you reopen it: a ship that was 10 minutes from landing when you closed the app has landed when you return 10 minutes later. Turn on notifications and your phone tells you the moment a contract completes.</p>
+    <ul style="margin: 8px 0 16px 20px; line-height: 2; color: var(--teal);">
+      <li style="color:var(--white)">Orbital periods are real wall-clock time — a 1-day orbit takes one literal day.</li>
+      <li style="color:var(--white)">Ship travel times are real minutes, as shown in the dispatch panel.</li>
+      <li style="color:var(--white)">Market refreshes every <strong>6 real hours</strong>. Job board refreshes every <strong>4 real hours</strong>.</li>
+    </ul>
+
+    <div class="callout callout-tip">
+      Orbital positions persist across sessions. Close the app and reopen it hours later — all planets, stations, and asteroids will be exactly where the math says they should be for that real-world timestamp.
+    </div>
+
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

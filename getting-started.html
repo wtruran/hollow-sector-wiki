@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started — Hollow Sector Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Wiki</a> / Overview</div>
+      <h1>Getting Started</h1>
+      <p class="subtitle">Your first steps in Hollow Sector — from ƒ15,000 to a working fleet.</p>
+    </div>
+
+    <h2>Starting Conditions</h2>
+    <p>Every new game assigns you a random <strong>home station</strong> from a pool of 15 centrally located stations. Your home base is where you sell materials, store cargo, and manage your fleet. You begin with:</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;">
+      <li><strong style="color:var(--white)">ƒ15,000</strong> in starting credits</li>
+      <li>No ships — you must buy your first from the Vendor tab</li>
+      <li>Access to three starter ships: <strong style="color:var(--white)">SF1000</strong>, <strong style="color:var(--white)">FX1000</strong>, <strong style="color:var(--white)">MN1000</strong></li>
+    </ul>
+
+    <h2>Recommended First Steps</h2>
+
+    <h3>Step 1 — Buy a Freight Ship</h3>
+    <p>Head to the <strong>Vendor</strong> tab and purchase an <strong>SF1000</strong> (ƒ10,000). This is your workhorse for early freight contracts. You'll have ƒ5,000 left — enough buffer to cover upkeep on a short run.</p>
+
+    <div class="callout teal">
+      <strong>Upkeep matters.</strong> Every ship accrues upkeep credits per minute while deployed. If a job doesn't cover upkeep, you lose money. Check the maintenance estimate before confirming any dispatch.
+    </div>
+
+    <h3>Step 2 — Take a Freight Contract</h3>
+    <p>Open the <strong>Job Board</strong> and filter to Freight. Look for a <strong>short-distance, low-SU</strong> contract — ideally 1 SU containers within 500 WU. The SF1000 carries 3 SU and has a 500 WU range, so don't accept jobs beyond that distance.</p>
+    <p>Job ratings run <span class="rating rating-A">A</span> through <span class="rating rating-F">F</span>. Early jobs will mostly be D and F rated — that's normal. Focus on net profit, not rating.</p>
+
+    <h3>Step 3 — Add a Fighter (Optional but Wise)</h3>
+    <p>An <strong>FX1000</strong> (ƒ5,000) provides 2 points of risk aversion. Assign it as escort on freight jobs to reduce your attack failure chance. For Risk 0–1 jobs it's not essential, but it becomes critical as cargo value increases.</p>
+
+    <h3>Step 4 — Try Mining</h3>
+    <p>An <strong>MN1000</strong> (ƒ10,000) can mine common-tier asteroids nearby. Open the <strong>Map</strong>, tap an asteroid close to your home station, and dispatch. Common materials (Iron, Nickel, Cobalt) have low piracy risk and sell for ƒ1,200/CU at base market rates.</p>
+
+    <h2>Key Timers to Know</h2>
+    <table class="wiki-table">
+      <thead><tr><th>Event</th><th>Interval</th></tr></thead>
+      <tbody>
+        <tr><td>Job board refresh</td><td class="val">Every 4 hours</td></tr>
+        <tr><td>Market price refresh</td><td class="val">Every 6 hours</td></tr>
+        <tr><td>Limited ship rotation</td><td class="val">Every 2 hours</td></tr>
+        <tr><td>Asteroid risk re-roll</td><td class="val">Every 4 hours</td></tr>
+        <tr><td>Sales volume reset</td><td class="val">Daily at midnight</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common Early Mistakes</h2>
+    <div class="callout">
+      <strong>Accepting jobs beyond your ship's range.</strong> Check the range stat before dispatching — ships can't complete routes longer than their listed range.
+    </div>
+    <div class="callout">
+      <strong>Ignoring upkeep on long runs.</strong> A long haul on a slow ship can cost more in upkeep than the contract pays. Always check the maintenance estimate in the job detail screen.
+    </div>
+    <div class="callout">
+      <strong>Selling everything at once.</strong> The market has supply depression — selling large volumes of the same material at the same station drives the price toward zero until the daily reset.
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

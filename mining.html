@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mining — Hollow Sector Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Wiki</a> / Mechanics</div>
+      <h1>Mining</h1>
+      <p class="subtitle">Sending ships to asteroids, selecting materials, and surviving the return trip.</p>
+    </div>
+
+    <h2>Overview</h2>
+    <p>Mining is your primary source of raw materials. Open the <strong>Map</strong>, tap an asteroid, and dispatch one or more mining ships. Ships travel to the asteroid, extract material, then return to your nearest owned ship yard — where the cargo is automatically added to storage for selling or refining.</p>
+
+    <h2>Dispatching a Mining Run</h2>
+    <ol style="color:var(--teal);padding-left:20px;margin-bottom:16px;line-height:2">
+      <li>Open the <strong>Map</strong> tab and tap an asteroid.</li>
+      <li>In the asteroid popup, check the <strong>Risk</strong> level and available materials.</li>
+      <li>Select which materials to mine (checkboxes).</li>
+      <li>Assign one or more <strong>Mining ships</strong>.</li>
+      <li>Optionally assign <strong>Fighter escorts</strong> to reduce attack risk on the return trip.</li>
+      <li>Review the maintenance estimate, then confirm.</li>
+    </ol>
+
+    <h2>Asteroid Risk</h2>
+    <p>Each asteroid has a <strong>Risk</strong> value displayed in its popup. This is determined by the highest-risk material available on that asteroid and re-rolled every <strong>4 hours</strong>.</p>
+    <p>Risk ranges by material tier:</p>
+
+    <table class="wiki-table">
+      <thead><tr><th>Tier</th><th>Materials</th><th>Risk Range</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge badge-common">Common</span></td><td>Iron, Nickel, Cobalt</td><td class="val">0 – 2</td></tr>
+        <tr><td><span class="badge badge-uncommon">Uncommon</span></td><td>Ice</td><td class="val">2 – 5</td></tr>
+        <tr><td><span class="badge badge-rare">Rare</span></td><td>Platinum, Iridium, Rhodium</td><td class="val">6 – 10</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      The asteroid's displayed risk is the exact value used for the attack roll on the return trip. If the asteroid shows Risk 0, you cannot be attacked — even without escorts.
+    </div>
+
+    <h2>Mining Phases</h2>
+    <table class="wiki-table">
+      <thead><tr><th>Phase</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td class="val">Travel to Asteroid</td><td>Ship travels from its current location to the asteroid.</td></tr>
+        <tr><td class="val">Mining</td><td>Ship extracts the selected materials. Time depends on material's mine time and ship's mining speed multiplier.</td></tr>
+        <tr><td class="val">Returning</td><td>Ship travels back to the nearest owned ship yard. This is when the attack roll happens.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Mining Speed</h2>
+    <p>Each mining ship has a <strong>mining speed multiplier</strong>. This multiplier is applied to the base mine time per CU (1.8 real seconds for all materials). Lower multiplier = faster extraction.</p>
+    <div class="callout teal">
+      <strong>Total mine time</strong> = cargo capacity (CU) × base mine time (1.8 real sec/CU) × ship mining speed multiplier
+    </div>
+
+    <table class="wiki-table">
+      <thead><tr><th>Ship</th><th>Cargo</th><th>Mining Speed</th><th>Effective sec/CU</th><th>Time to fill hold</th></tr></thead>
+      <tbody>
+        <tr><td class="val">MN1000</td><td>3 SU</td><td>1.0×</td><td>1.8s/CU</td><td>~5 real seconds</td></tr>
+        <tr><td class="val">MN2000</td><td>8 SU</td><td>0.7×</td><td>1.3s/CU</td><td>~10 real seconds</td></tr>
+        <tr><td class="val">MN3000</td><td>15 SU</td><td>0.4×</td><td>0.7s/CU</td><td>~11 real seconds</td></tr>
+        <tr><td class="val">MN4000</td><td>30 SU</td><td>0.2×</td><td>0.4s/CU</td><td>~11 real seconds</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Multiple Miners</h2>
+    <p>You can assign multiple mining ships to the same asteroid in a single run. They all travel together and mine simultaneously — the run completes when the last ship finishes. Multiple ships also share any assigned escorts, keeping convoy costs reasonable.</p>
+
+    <h2>Drone Mining</h2>
+    <p>If your station has a <strong>Drone Bay</strong> upgrade, drones can mine autonomously without committing any player ships. Drones operate within 500 WU of their station, carry 1 SU per trip, and ignore piracy risk entirely. They loop continuously until stopped. See <a href="shipyards.html">Station Upgrades</a> for setup details.</p>
+    <p>Active drones appear on the map as a <span style="color:#9542C8">purple circle</span> traveling between station and asteroid, with a faint dashed purple route line.</p>
+
+    <h2>Escort Recommendation</h2>
+    <p>For common-tier asteroids with Risk 0–2, escorts are optional. For Ice (Risk 2–5) or rare materials (Risk 6–10), assign fighters whose combined aversion meets or exceeds the asteroid's current risk level to guarantee a safe return.</p>
+
+    <div class="callout">
+      <strong>Enemy danger penalty applies to mining too.</strong> If your return route passes within the danger radius of an active enemy ship, the fail chance doubles. Keep an eye on the map before dispatching to high-risk sites.
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

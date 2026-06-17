@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salvage — Hollow Sector Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Wiki</a> / Mechanics</div>
+      <h1>Salvage</h1>
+      <p class="subtitle">Drifting cargo is everywhere in a dead sector — if you have the eyes to spot it and a hold to recover it.</p>
+    </div>
+
+    <p>Salvage is free-floating cargo waiting to be recovered. It comes from two sources: the <strong>Salvage Scanner</strong> upgrade, which strands wreck-cargo near your stations, and <a href="piracy.html">piracy</a>, which scatters whatever loot your freighter couldn't haul at a raid's kill site.</p>
+
+    <h2>The Salvage Scanner</h2>
+    <p>The Salvage Scanner is a cheap station upgrade — <strong>ƒ5,000</strong> — that pays for itself quickly. Once installed at a station, it periodically strands a modest cargo drop within <strong>500 WU</strong> of that station.</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Spawn rate:</strong> ~75% chance per real hour to strand a new drop.</li>
+      <li><strong style="color:var(--white)">Accrues offline:</strong> rolls are replayed when you reopen the app, so drops pile up while you're away (up to the cap).</li>
+      <li><strong style="color:var(--white)">Cap:</strong> up to 3 uncollected drops afloat at once — recover them before they fill up and rolls are wasted.</li>
+      <li><strong style="color:var(--white)">Contents:</strong> a mix of raw <a href="materials.html">ore</a> and <a href="commodities.html">commodities</a>, usually worth a modest 1–3k, rarely more.</li>
+    </ul>
+
+    <div class="callout teal">
+      Drops are anchored to the orbit of the scanner station's planet — they drift with it rather than sitting at a fixed point, so a drop's exact position moves over time.
+    </div>
+
+    <h2>Recovering a drop</h2>
+    <p>Tap a salvage marker on the map and send a docked <strong>freighter</strong> (only freighters can haul it). The panel shows the cargo, its value, the maintenance for the round trip, and how long before the drop disperses.</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Lifespan:</strong> a drop disperses <strong>3 hours</strong> after it appears. Reach it before then or it's gone.</li>
+      <li><strong style="color:var(--white)">Range:</strong> the freighter must be able to reach the drop's intercept point within its range.</li>
+      <li><strong style="color:var(--white)">Delivery:</strong> recovered cargo is hauled to your nearest owned station and added to its storage.</li>
+    </ul>
+
+    <div class="callout">
+      A salvage run shows a solid trail behind the freighter (the path it has travelled) and a dashed line ahead to the drop — the same way freight routes are drawn.
+    </div>
+
+    <h2>Raid scatter</h2>
+    <p>When you win a <a href="piracy.html">raid</a> and your freighter's hold fills up, the overflow doesn't vanish — it's cut loose as a salvage drop right at the kill site, collectable within the same 3-hour window. Bring a second freighter, or come back for it before it disperses.</p>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

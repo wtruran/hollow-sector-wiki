@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materials — Hollow Sector Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Wiki</a> / Reference</div>
+      <h1>Materials</h1>
+      <p class="subtitle">Raw and refined resources — base values, extraction times, and piracy risk.</p>
+    </div>
+
+    <h2>Raw Materials</h2>
+    <p>Raw materials are mined from asteroids and can be sold directly on the market or refined into higher-value products at a station with a <strong>Refinery</strong> upgrade.</p>
+
+    <table class="wiki-table">
+      <thead>
+        <tr><th>Material</th><th>Tier</th><th>Base Value (ƒ/CU)</th><th>Mine Time (real sec/CU)</th><th>Piracy Risk Range</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="val">Iron</td>
+          <td><span class="badge badge-common">Common</span></td>
+          <td>1,200</td><td>1.8s</td>
+          <td>
+            <div class="risk-bar"><span>0–2</span>
+              <div class="risk-track"><div class="risk-fill" style="width:20%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="val">Nickel</td>
+          <td><span class="badge badge-common">Common</span></td>
+          <td>1,200</td><td>1.8s</td>
+          <td>
+            <div class="risk-bar"><span>0–2</span>
+              <div class="risk-track"><div class="risk-fill" style="width:20%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="val">Cobalt</td>
+          <td><span class="badge badge-common">Common</span></td>
+          <td>1,200</td><td>1.8s</td>
+          <td>
+            <div class="risk-bar"><span>0–2</span>
+              <div class="risk-track"><div class="risk-fill" style="width:20%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="val">Ice</td>
+          <td><span class="badge badge-uncommon">Uncommon</span></td>
+          <td>2,000</td><td>1.8s</td>
+          <td>
+            <div class="risk-bar"><span>2–5</span>
+              <div class="risk-track"><div class="risk-fill medium" style="width:50%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="val">Platinum</td>
+          <td><span class="badge badge-rare">Rare</span></td>
+          <td>5,000</td><td>1.8s</td>
+          <td>
+            <div class="risk-bar"><span>6–10</span>
+              <div class="risk-track"><div class="risk-fill high" style="width:100%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="val">Iridium</td>
+          <td><span class="badge badge-rare">Rare</span></td>
+          <td>5,000</td><td>1.8s</td>
+          <td>
+            <div class="risk-bar"><span>6–10</span>
+              <div class="risk-track"><div class="risk-fill high" style="width:100%"></div></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="val">Rhodium</td>
+          <td><span class="badge badge-rare">Rare</span></td>
+          <td>5,000</td><td>1.8s</td>
+          <td>
+            <div class="risk-bar"><span>6–10</span>
+              <div class="risk-track"><div class="risk-fill high" style="width:100%"></div></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Refined Materials</h2>
+    <p>Refined materials are produced at stations with a <strong>Refinery</strong> upgrade (see <a href="shipyards.html">Station Upgrades</a>). Each raw material has exactly one refined product. Refined goods sell for more than their raw source and fluctuate on the same 70%–130% market cycle.</p>
+
+    <table class="wiki-table">
+      <thead>
+        <tr><th>Refined Product</th><th>Source</th><th>Tier</th><th>Base Value (ƒ/CU)</th><th>Min Price</th><th>Max Price</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="val">Iron Alloy</td><td>Iron</td><td><span class="badge badge-common">Common</span></td><td>1,440</td><td>1,008</td><td>1,872</td></tr>
+        <tr><td class="val">Nickel Composite</td><td>Nickel</td><td><span class="badge badge-common">Common</span></td><td>1,440</td><td>1,008</td><td>1,872</td></tr>
+        <tr><td class="val">Cobalt Plating</td><td>Cobalt</td><td><span class="badge badge-common">Common</span></td><td>1,440</td><td>1,008</td><td>1,872</td></tr>
+        <tr><td class="val">Liquid Hydrogen</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2,400</td><td>1,680</td><td>3,120</td></tr>
+        <tr><td class="val">Platinum Circuit</td><td>Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6,000</td><td>4,200</td><td>7,800</td></tr>
+        <tr><td class="val">Iridium Core</td><td>Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6,000</td><td>4,200</td><td>7,800</td></tr>
+        <tr><td class="val">Rhodium Catalyst</td><td>Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6,000</td><td>4,200</td><td>7,800</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout teal">
+      <strong>Refining costs and time.</strong> Refine cost is 10% of the raw material's base value per SU. Refine time per SU: Common = 6 real seconds, Uncommon = 12 real seconds, Rare = 18 real seconds. The quantity selector in the Storage tab shows total cost and time before you confirm.
+    </div>
+
+    <h2>Notes</h2>
+    <div class="callout teal">
+      <strong>Risk ranges are per-asteroid, not per-material.</strong> An asteroid's risk is set to the highest range of any material it contains, then a specific value is rolled within that range every 4 hours.
+    </div>
+    <div class="callout">
+      <strong>Market prices fluctuate ±30%</strong> from base values on a 6-hour refresh cycle — for both raw and refined materials. Check your station's Market Rates tab before selling.
+    </div>
+    <div class="callout">
+      <strong>Supply depression</strong> reduces the effective sell price when you sell large volumes at the same station. Spread sales across stations or wait for the daily reset to maximise income.
+    </div>
+
+    <h2>Tier Summary</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title"><span class="badge badge-common">Common</span></div>
+        <div class="card-sub">
+          Iron · Nickel · Cobalt<br>
+          Raw base: <span>ƒ1,200/CU</span> · Refined base: <span>ƒ1,440/CU</span><br>
+          Mine time: <span>1.8 real sec/CU</span><br>
+          Risk: <span>0–2</span> — safe without escorts
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span class="badge badge-uncommon">Uncommon</span></div>
+        <div class="card-sub">
+          Ice<br>
+          Raw base: <span>ƒ2,000/CU</span> · Refined base: <span>ƒ2,400/CU</span> (Liquid Hydrogen)<br>
+          Mine time: <span>1.8 real sec/CU</span><br>
+          Risk: <span>2–5</span> — light escort recommended
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span class="badge badge-rare">Rare</span></div>
+        <div class="card-sub">
+          Platinum · Iridium · Rhodium<br>
+          Raw base: <span>ƒ5,000/CU</span> · Refined base: <span>ƒ6,000/CU</span><br>
+          Mine time: <span>1.8 real sec/CU</span><br>
+          Risk: <span>6–10</span> — heavy escort required
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

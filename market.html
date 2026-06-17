@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market — Hollow Sector Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Wiki</a> / Mechanics</div>
+      <h1>Market</h1>
+      <p class="subtitle">Selling mined materials, supply depression, and the price refresh cycle.</p>
+    </div>
+
+    <h2>Station Modal Tabs</h2>
+    <p>Opening a home base or owned ship yard shows a secondary tab row: <strong>Storage</strong> | <strong>Market Rates</strong> | <strong>Upgrades</strong>.</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Storage</strong> — view and sell your inventory, and trigger refinery runs if the station has a Refinery upgrade.</li>
+      <li><strong style="color:var(--white)">Market Rates</strong> — view current buy prices for all raw and refined materials at this station, plus the countdown to the next price refresh.</li>
+      <li><strong style="color:var(--white)">Upgrades</strong> — purchase and manage station upgrades (Refinery, Drone Bay).</li>
+    </ul>
+
+    <h2>Selling Materials</h2>
+    <p>Mined materials are stored at your home base (or the nearest owned ship yard) automatically when a mining run completes. Open a station and go to the <strong>Storage</strong> tab to sell materials at the current market rate.</p>
+
+    <h2>Market Prices</h2>
+    <p>Prices are randomised per station within a <strong>70%–130%</strong> range of each material's base value. A ƒ5,000/CU rare material will sell for anywhere between ƒ3,500 and ƒ6,500 depending on which station you sell at.</p>
+    <p>Prices refresh every <strong>6 hours</strong>. The countdown is shown on the Market Rates tab. If the timer reaches zero while the screen is open, prices update automatically.</p>
+    <p>The Market Rates tab displays two sections: <strong>Raw Materials</strong> and <strong>Refined Materials</strong>, each showing the current live price at that station.</p>
+
+    <h2>Raw Material Base Values</h2>
+    <table class="wiki-table">
+      <thead><tr><th>Material</th><th>Tier</th><th>Base Value (ƒ/CU)</th><th>Min Price</th><th>Max Price</th></tr></thead>
+      <tbody>
+        <tr><td class="val">Iron</td><td><span class="badge badge-common">Common</span></td><td>1,200</td><td>840</td><td>1,560</td></tr>
+        <tr><td class="val">Nickel</td><td><span class="badge badge-common">Common</span></td><td>1,200</td><td>840</td><td>1,560</td></tr>
+        <tr><td class="val">Cobalt</td><td><span class="badge badge-common">Common</span></td><td>1,200</td><td>840</td><td>1,560</td></tr>
+        <tr><td class="val">Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2,000</td><td>1,400</td><td>2,600</td></tr>
+        <tr><td class="val">Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>5,000</td><td>3,500</td><td>6,500</td></tr>
+        <tr><td class="val">Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>5,000</td><td>3,500</td><td>6,500</td></tr>
+        <tr><td class="val">Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>5,000</td><td>3,500</td><td>6,500</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Refined Material Base Values</h2>
+    <p>Refined materials are produced by a station <a href="shipyards.html">Refinery upgrade</a>. They sell on the same market with the same 70%–130% fluctuation, but at higher base values.</p>
+    <table class="wiki-table">
+      <thead><tr><th>Refined Material</th><th>Source</th><th>Tier</th><th>Base Value (ƒ/CU)</th><th>Min Price</th><th>Max Price</th></tr></thead>
+      <tbody>
+        <tr><td class="val">Iron Alloy</td><td>Iron</td><td><span class="badge badge-common">Common</span></td><td>1,440</td><td>1,008</td><td>1,872</td></tr>
+        <tr><td class="val">Nickel Composite</td><td>Nickel</td><td><span class="badge badge-common">Common</span></td><td>1,440</td><td>1,008</td><td>1,872</td></tr>
+        <tr><td class="val">Cobalt Plating</td><td>Cobalt</td><td><span class="badge badge-common">Common</span></td><td>1,440</td><td>1,008</td><td>1,872</td></tr>
+        <tr><td class="val">Liquid Hydrogen</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2,400</td><td>1,680</td><td>3,120</td></tr>
+        <tr><td class="val">Platinum Circuit</td><td>Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6,000</td><td>4,200</td><td>7,800</td></tr>
+        <tr><td class="val">Iridium Core</td><td>Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6,000</td><td>4,200</td><td>7,800</td></tr>
+        <tr><td class="val">Rhodium Catalyst</td><td>Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6,000</td><td>4,200</td><td>7,800</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Supply Depression</h2>
+    <p>Each time you sell a material at a station, its effective price drops. Every <strong>10 SU sold</strong> reduces the price by 10% at that station. At 100 SU sold, the price reaches zero.</p>
+
+    <div class="callout">
+      <strong>Don't flood one station.</strong> Sell large hauls across multiple stations or wait for the daily sales volume reset at midnight. The reset clears all supply depression, restoring full prices.
+    </div>
+
+    <h2>Ship Yards &amp; Transfer Runs</h2>
+    <p>Once you own a ship yard at a second station (see <a href="shipyards.html">Ship Yards</a>), you can transfer materials between stations using freight ships. This lets you move inventory to a station with higher prices or less supply depression.</p>
+
+    <div class="callout teal">
+      Transfer runs also carry risk. The risk is based on the total value of the transferred cargo — higher value loads attract more pirate attention.
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

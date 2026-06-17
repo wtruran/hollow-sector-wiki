@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piracy — Hollow Sector Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Wiki</a> / Mechanics</div>
+      <h1>Piracy</h1>
+      <p class="subtitle">Not every credit comes from a contract. Raid NPC freight fleets and take their cargo by force.</p>
+    </div>
+
+    <div class="callout">
+      <strong>Choose another path.</strong> The factions move cargo through the sector whether you work for them or not. With enough fighters, you can take it.
+    </div>
+
+    <h2>Finding a target</h2>
+    <p>NPC freight fleets travel the sector constantly along real routes between stations. By default they're invisible — you can't raid what you can't see. Install the <strong>Cargo Scanner</strong> upgrade (see <a href="shipyards.html">Stations &amp; Upgrades</a>) at a station and any fleet that passes within its range is revealed on the map and stays known for its run.</p>
+    <p>A revealed fleet shows its <strong>faction</strong>, an estimate of the cargo it's hauling, and a <strong>fleet risk</strong> rating from its escorts.</p>
+
+    <h2>Launching a raid</h2>
+    <p>Tap a revealed fleet on the map and assign one or more docked <strong>fighters</strong>. Optionally bring a <strong>freighter</strong> to haul the loot — without one, anything you can't carry is cut loose as a <a href="salvage.html">salvage</a> drop at the kill site.</p>
+    <p>The panel shows your <strong>success chance</strong> and the <strong>maintenance</strong> charged for the round trip. Your fighters fly to intercept the moving fleet, and combat resolves on arrival.</p>
+
+    <h3>Success chance</h3>
+    <div class="callout">
+      Win odds scale with your assigned fighters' combined <strong>risk aversion</strong> against the target's <strong>fleet risk</strong>. Equal forces are roughly a coin flip; doubling the enemy's strength pushes you toward ~85%.
+    </div>
+
+    <h2>Outcomes</h2>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Win</strong> — you seize the fleet's <a href="commodities.html">commodities</a>. Your freighter hauls the most valuable goods home first (to its cargo cap); the rest drifts as collectable salvage. A close fight may still cost you a fighter or two to attrition.</li>
+      <li><strong style="color:var(--white)">Loss</strong> — your raiding party is destroyed and you take on a <a href="risk.html">lien</a> for each ship lost.</li>
+    </ul>
+    <p>On a win the survivors haul the loot back to your nearest owned base and deposit it there.</p>
+
+    <h2>Reputation cost</h2>
+    <div class="callout teal">
+      Raiding a faction's fleet <strong>costs you reputation</strong> with that faction (−10 per raid). Piracy and a clean contracting record don't mix — pick your targets with an eye on whose jobs you still want.
+    </div>
+
+    <h2>Maintenance</h2>
+    <p>Like every dispatch, a raid charges <strong>maintenance</strong> up front for the round trip, shown before you commit. Ships destroyed in the fight have their unused return-leg maintenance refunded. A failed or empty raid still costs the upkeep to get there and back.</p>
+
+    <div class="callout">
+      Want to wait for a better intercept? If letting the fleet's path bring it closer would save meaningful travel, the panel offers a <strong>delayed launch</strong> — see <a href="jobs.html">Jobs</a> for how closest-approach timing works.
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risk & Combat — Hollow Sector Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Wiki</a> / Mechanics</div>
+      <h1>Risk & Combat</h1>
+      <p class="subtitle">How attacks are rolled, what enemy ships do, and how escorts protect your fleet.</p>
+    </div>
+
+    <h2>The Attack Roll</h2>
+    <p>When a convoy or mining ship departs, an attack timer is set for <strong>1–3 minutes</strong> after departure. When the timer fires, the game rolls to determine if the convoy is attacked.</p>
+
+    <h3>Failure Chance Formula</h3>
+    <div class="callout">
+      <code>failChance = (riskLevel − combinedEscortAversion) × 10</code>, clamped to 0–100%.
+    </div>
+    <p>A Risk 5 job with escorts totalling 3 aversion has a <strong>20% failure chance</strong>. If your escorts fully cover the risk level, failure chance is 0% — the convoy is guaranteed safe.</p>
+
+    <h2>Enemy Ships</h2>
+    <p>Periodically, an enemy ship spawns and travels through the sector along a randomised path. Its current position is shown on the map — highlighted so you can track it.</p>
+    <p>Enemy ships have their own <strong>risk level (1–10)</strong> and a <strong>bounty</strong> (ƒ3,000 × risk level).</p>
+
+    <h3>Enemy Danger Penalty</h3>
+    <p>Each enemy ship has a <strong>danger radius</strong>. If your convoy's route passes within that radius of the enemy ship at departure time, the danger modifier activates:</p>
+    <div class="callout">
+      <strong>Fail chance is doubled</strong> when the route passes through an enemy's danger radius.
+    </div>
+    <p>A 10% base fail chance becomes 20%. A 0% chance (fully covered by escorts) stays 0% — you cannot be attacked through a covered risk.</p>
+
+    <h2>Escort Coverage</h2>
+    <p>Assign fighter ships as escorts when dispatching freight or mining runs. Their <strong>Risk Aversion</strong> values stack:</p>
+
+    <table class="wiki-table">
+      <thead><tr><th>Escort Combination</th><th>Total Aversion</th><th>Covers Risk Up To</th></tr></thead>
+      <tbody>
+        <tr><td>1× FX1000</td><td class="val">1</td><td>Risk 1</td></tr>
+        <tr><td>1× FX2000</td><td class="val">2</td><td>Risk 2</td></tr>
+        <tr><td>2× FX2000</td><td class="val">4</td><td>Risk 4</td></tr>
+        <tr><td>1× FX3000</td><td class="val">5</td><td>Risk 5</td></tr>
+        <tr><td>1× FX3000 + 1× FX2000</td><td class="val">7</td><td>Risk 7</td></tr>
+        <tr><td>1× FX4000</td><td class="val">12</td><td>Risk 10 (max)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout teal">
+      The SF4000 and MN4000 have a built-in risk aversion of 2. They count toward the total escort aversion for their own runs.
+    </div>
+
+    <h2>Bounty Hunting</h2>
+    <p>When an enemy ship is active, you can send a fighter to intercept it. Open the enemy ship's details on the map and dispatch a hunter. The fighter travels toward the enemy's projected position.</p>
+    <p>If the intercept succeeds, you collect the bounty and earn faction reputation. The bounty scales with the enemy's risk level: a Risk 10 enemy pays <strong>ƒ30,000</strong>.</p>
+
+    <div class="callout">
+      <strong>Timing matters.</strong> Enemy ships only remain in the sector for a limited time. If your fighter arrives after the enemy has left, no bounty is collected and the fighter returns home.
+    </div>
+
+    <h2>Failure Consequences</h2>
+    <p>When an attack succeeds (the roll fails), the job or run is lost and the ship is destroyed. You don't receive the contract payout, and any cargo aboard goes with the ship.</p>
+
+    <h3>Liens</h3>
+    <p>Losing a ship triggers an <strong>insurance lien</strong> — a debt scaled to the destroyed ship's value. A lien is restrictive until it's paid off:</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li>You <strong>can't buy ships, ship yards, or station upgrades</strong>.</li>
+      <li><span class="rating rating-A">A</span>- and <span class="rating rating-B">B</span>-rated contracts are <strong>blocked</strong> until the lien clears.</li>
+      <li><a href="logistics.html">Relocations</a> and a <a href="faction-ships.html">Custodian</a> move must be paid in cash — a lien can't cover them.</li>
+    </ul>
+    <p>Pay the lien down from your bank to lift the restrictions. Ordinary maintenance can be charged against a lien, but the big-ticket actions above cannot.</p>
+
+    <div class="callout teal">
+      Defending against attacks isn't only about escorts. A station's <a href="shipyards.html">Base Defense</a> upgrade shields runs that pass close to it, and on the offensive you can become the threat — see <a href="piracy.html">Piracy</a>.
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -18,21 +18,21 @@
 
     <h2>The Job Board</h2>
     <p>The job board holds up to <strong>20 contracts</strong> at a time — roughly split between freight and defense. It refreshes every <strong>4 hours</strong> with a completely new pool. Contracts not accepted before the refresh are lost.</p>
-    <p>You can sort the board by <strong>Distance</strong>, <strong>Credits</strong>, <strong>SU</strong>, or <strong>Risk</strong> using the sort bar. Click a sort option again to reverse direction.</p>
+    <p>You can sort the board by <strong>Distance</strong>, <strong>Credits</strong>, <strong>SU</strong> (freight only), <strong>Rating</strong>, or <strong>Risk</strong> using the sort bar. Click a sort option again to reverse direction.</p>
 
     <h2>Job Ratings &amp; Tiers</h2>
     <p>Every contract has a rating from <strong>F to A</strong>, and the rating drives everything else about the job. A job's tier is chosen first, then its <strong>payout, distance, and cargo</strong> are all generated to fit that tier. This keeps payouts bounded — a long route can no longer be gamed into a fortune — and makes jobs grow naturally as you do.</p>
     <p>Each tier unlocks with <a href="factions.html">faction reputation</a>. A job carries one faction's tag, and you only see it if your reputation with <em>that</em> faction meets the tier's threshold:</p>
 
     <table class="wiki-table">
-      <thead><tr><th>Tier</th><th>Rep to Unlock</th><th>Payout Band</th><th>Distance (WU)</th><th>Cargo (SU)</th></tr></thead>
+      <thead><tr><th>Tier</th><th>Rep to Unlock</th><th>Payout Band</th><th>Distance (WU)</th><th>Cargo (SU)</th><th>Container (SU)</th></tr></thead>
       <tbody>
-        <tr><td><span class="rating rating-A">A</span></td><td class="val">1,000</td><td>ƒ300k – 900k</td><td>8,000 – 12,500</td><td>30 – 60</td></tr>
-        <tr><td><span class="rating rating-B">B</span></td><td class="val">800</td><td>ƒ100k – 300k</td><td>5,000 – 9,000</td><td>20 – 40</td></tr>
-        <tr><td><span class="rating rating-C">C</span></td><td class="val">600</td><td>ƒ35k – 100k</td><td>2,500 – 6,000</td><td>12 – 25</td></tr>
-        <tr><td><span class="rating rating-D">D</span></td><td class="val">300</td><td>ƒ12k – 35k</td><td>1,200 – 3,000</td><td>6 – 15</td></tr>
-        <tr><td><span class="rating rating-E">E</span></td><td class="val">100</td><td>ƒ4k – 12k</td><td>400 – 1,500</td><td>3 – 8</td></tr>
-        <tr><td><span class="rating rating-F">F</span></td><td class="val">0</td><td>ƒ1.5k – 4k</td><td>local (≤ 500)</td><td>1 – 3</td></tr>
+        <tr><td><span class="rating rating-A">A</span></td><td class="val">1,000</td><td>ƒ300k – 900k</td><td>8,000 – 12,500</td><td>30 – 60</td><td>18 – 25</td></tr>
+        <tr><td><span class="rating rating-B">B</span></td><td class="val">800</td><td>ƒ100k – 300k</td><td>5,000 – 9,000</td><td>20 – 40</td><td>12 – 25</td></tr>
+        <tr><td><span class="rating rating-C">C</span></td><td class="val">600</td><td>ƒ35k – 100k</td><td>2,500 – 6,000</td><td>12 – 25</td><td>8 – 25</td></tr>
+        <tr><td><span class="rating rating-D">D</span></td><td class="val">300</td><td>ƒ12k – 35k</td><td>1,200 – 3,000</td><td>6 – 15</td><td>4 – 15</td></tr>
+        <tr><td><span class="rating rating-E">E</span></td><td class="val">100</td><td>ƒ4k – 12k</td><td>400 – 1,500</td><td>3 – 8</td><td>2 – 8</td></tr>
+        <tr><td><span class="rating rating-F">F</span></td><td class="val">0</td><td>ƒ1.5k – 4k</td><td>local (≤ 500)</td><td>1 – 3</td><td>1 – 3</td></tr>
       </tbody>
     </table>
 
@@ -41,7 +41,13 @@
     </div>
 
     <h2>Freight Contracts</h2>
-    <p>Freight jobs ask you to transport one or more cargo containers from a pickup station to a dropoff station. The load is split into containers of up to 25 SU — a container can't be split across ships, but multiple containers can ride on different ships in the same run, so big A-tier hauls need either an SF4000 or several freighters.</p>
+    <p>Freight jobs ask you to transport cargo from a pickup station to a dropoff station. The total load is split into individual <strong>containers</strong>, and the container size scales with the contract's rating (see the table above). A container can't be split across ships — each one must fit whole in a single freighter's hold — but different containers can ride on different ships in the same run.</p>
+    <p>This means a contract's rating decides what kind of fleet it needs:</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Low-rated jobs</strong> break into small containers (down to 1 SU), so a group of small haulers like the SF1000 can split the load between them.</li>
+      <li><strong style="color:var(--white)">High-rated jobs</strong> pack large containers (18 – 25 SU at A tier), each of which needs a big hull such as the SF3000 or SF4000 — a swarm of small ships can't chip away at them.</li>
+      <li>No container ever exceeds <strong>25 SU</strong>, the largest freighter hold, so every contract is flyable if you bring the right ships. The assignment panel blocks accepting a job your selected ships can't pack.</li>
+    </ul>
     <p>Upkeep is deducted from the payout — the game guarantees a minimum profit of <strong>ƒ1,500</strong> per job so short local runs never run at a loss.</p>
 
     <h3>Risk on Freight</h3>

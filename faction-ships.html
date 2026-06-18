@@ -16,7 +16,7 @@
       <p class="subtitle">Reward vessels that break the naming convention — earned through reputation, not bought off the rack.</p>
     </div>
 
-    <p>At <strong>600 reputation</strong> with a <a href="factions.html">faction</a>, that faction's signature ship unlocks for purchase in the Vendor's <strong>Faction Rewards</strong> section. These are one-of-a-kind vessels with their own names and roles, distinct from the standard SF/FX/MN fleet.</p>
+    <p>Once you reach a <a href="factions.html">faction's</a> required <strong>reputation</strong>, its signature ship unlocks for purchase in the Vendor's <strong>Faction Rewards</strong> section. These are one-of-a-kind vessels with their own names and roles, distinct from the standard SF/FX/MN fleet. Some cost <strong>materials</strong> on top of credits, drawn from your station stockpiles (the base you build at first, then your other stations).</p>
 
     <h2>The Custodian — Iron Warden</h2>
     <p>Unlocked at <strong>600 reputation</strong> with the <strong>Iron Warden</strong>, the <strong>Custodian</strong> is a large frigate that functions as a wandering mobile base. It never docks at a station — once commissioned, it lives on the map as a base of its own.</p>
@@ -24,7 +24,7 @@
     <table class="wiki-table">
       <thead><tr><th>Stat</th><th>Value</th></tr></thead>
       <tbody>
-        <tr><td>Cost</td><td class="val">ƒ400,000</td></tr>
+        <tr><td>Cost</td><td class="val">ƒ400,000 + 25 Energy</td></tr>
         <tr><td>Unlock</td><td>Iron Warden reputation 600</td></tr>
         <tr><td>Class</td><td>Fighter (mobile base)</td></tr>
         <tr><td>Cargo hold</td><td class="val">50 SU</td></tr>
@@ -58,13 +58,13 @@
     </div>
 
     <h2>The Synodos — The Aurel Conclave</h2>
-    <p>Unlocked at <strong>600 reputation</strong> with <strong>The Aurel Conclave</strong>, the <strong>Synodos</strong> is a roving auto-miner — a mobile <a href="shipyards.html">Drone Bay</a> that wanders the sector. It never docks; it lives on the map, mining nearby asteroids into its own hold while you direct it.</p>
+    <p>Unlocked at <strong>500 reputation</strong> with <strong>The Aurel Conclave</strong>, the <strong>Synodos</strong> is a roving auto-miner — a mobile <a href="shipyards.html">Drone Bay</a> that wanders the sector. It never docks; it lives on the map, mining nearby asteroids into its own hold while you direct it.</p>
 
     <table class="wiki-table">
       <thead><tr><th>Stat</th><th>Value</th></tr></thead>
       <tbody>
-        <tr><td>Cost</td><td class="val">ƒ400,000</td></tr>
-        <tr><td>Unlock</td><td>The Aurel Conclave reputation 600</td></tr>
+        <tr><td>Cost</td><td class="val">ƒ400,000 + 10 Energy</td></tr>
+        <tr><td>Unlock</td><td>The Aurel Conclave reputation 500</td></tr>
         <tr><td>Class</td><td>Mining (mobile base)</td></tr>
         <tr><td>Cargo hold</td><td class="val">200 SU</td></tr>
         <tr><td>Drone capacity</td><td class="val">20 drones</td></tr>
@@ -85,6 +85,33 @@
 
     <div class="callout">
       Like the Custodian, the Synodos is run entirely from the <strong>Map</strong>. It goes dark while relocating, then resumes mining once it settles at its new position.
+    </div>
+
+    <h2>The Perihelion — Meridian Consortium</h2>
+    <p>Unlocked at <strong>200 reputation</strong> with the <strong>Meridian Consortium</strong>, the <strong>Perihelion</strong> is a science platform that orbits just outside the sun, scraping raw <a href="materials.html">energy</a>. It's a hands-off passive income source: once commissioned it runs itself, and its built-in tender delivers the energy to your bases automatically.</p>
+
+    <table class="wiki-table">
+      <thead><tr><th>Stat</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>Cost</td><td class="val">ƒ120,000</td></tr>
+        <tr><td>Unlock</td><td>Meridian Consortium reputation 200</td></tr>
+        <tr><td>Class</td><td>Science (mobile base)</td></tr>
+        <tr><td>Output</td><td class="val">1 SU energy / real hour</td></tr>
+        <tr><td>Tender</td><td>The Swift (an SF3000)</td></tr>
+        <tr><td>Upkeep</td><td class="val">modest, charged per hour</td></tr>
+      </tbody>
+    </table>
+
+    <h2>How it works</h2>
+    <p>When purchased the Perihelion travels straight to a fixed dim-yellow band just outside the sun and orbits there forever — it never relocates and needs no input.</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Energy production:</strong> it scrapes <strong>1 SU of energy per real hour</strong> into its hold, accruing even while the app is closed. A modest upkeep is charged for each hour produced.</li>
+      <li><strong style="color:var(--white)">The Swift tender:</strong> once the hold reaches <strong>8 SU</strong>, the Swift launches at the orbit's closest approach to your nearest owned station, carries <strong>8 SU</strong> of energy there, unloads into that station's storage, and returns. The Perihelion keeps scraping while the Swift is away; leftover energy waits for the next run.</li>
+      <li><strong style="color:var(--white)">Selling energy:</strong> delivered energy sells like a premium commodity (about ƒ3,500 / SU) from the station it lands at, and can also be spent on <a href="#">faction ships</a> that require it.</li>
+    </ul>
+
+    <div class="callout">
+      Tap the Perihelion on the map for a read-out of its stored energy and the Swift's current run. There's nothing to manage — it's fully automatic.
     </div>
   </main>
 </div>

@@ -15,11 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
       { href: 'shipyards.html', text: 'Ship Yards' },
     ]},
     { label: 'Reference', links: [
-      { href: 'ships.html',     text: 'Ships' },
-      { href: 'materials.html', text: 'Materials' },
-      { href: 'asteroids.html', text: 'Asteroids' },
-      { href: 'stations.html',  text: 'Stations' },
-      { href: 'factions.html',  text: 'Factions' },
+      { href: 'ships.html',       text: 'Ships' },
+      { href: 'materials.html',   text: 'Materials' },
+      { href: 'commodities.html', text: 'Commodities' },
+      { href: 'asteroids.html',   text: 'Asteroids' },
+      { href: 'stations.html',    text: 'Stations' },
+      { href: 'factions.html',    text: 'Factions' },
     ]},
   ];
 

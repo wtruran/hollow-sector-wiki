@@ -41,8 +41,8 @@
         <tr><td class="val">Food Rations</td><td><span class="rating rating-E">E</span></td><td>ƒ250</td><td>ƒ175</td><td>ƒ325</td></tr>
         <tr><td class="val">Consumer Goods</td><td><span class="rating rating-E">E</span></td><td>ƒ200</td><td>ƒ140</td><td>ƒ260</td></tr>
         <tr><td class="val">Recycled Materials</td><td><span class="rating rating-E">E</span></td><td>ƒ200</td><td>ƒ140</td><td>ƒ260</td></tr>
+        <tr><td class="val">Potable Water</td><td><span class="rating rating-E">E</span></td><td>ƒ250</td><td>ƒ175</td><td>ƒ325</td></tr>
         <tr><td class="val">Spare Parts</td><td><span class="rating rating-F">F</span></td><td>ƒ150</td><td>ƒ105</td><td>ƒ195</td></tr>
-        <tr><td class="val">Potable Water</td><td><span class="rating rating-F">F</span></td><td>ƒ150</td><td>ƒ105</td><td>ƒ195</td></tr>
         <tr><td class="val">Medical Supplies</td><td><span class="rating rating-F">F</span></td><td>ƒ120</td><td>ƒ84</td><td>ƒ156</td></tr>
         <tr><td class="val">Waste Containers</td><td><span class="rating rating-F">F</span></td><td>ƒ100</td><td>ƒ70</td><td>ƒ130</td></tr>
       </tbody>
@@ -57,7 +57,51 @@
       <li><strong style="color:var(--white)">Freight contracts</strong> — the goods you're paid to deliver (you don't keep these; they're handed over at the dropoff).</li>
       <li><strong style="color:var(--white)"><a href="piracy.html">Piracy</a></strong> — raid an NPC freight fleet and seize whatever it was carrying.</li>
       <li><strong style="color:var(--white)"><a href="salvage.html">Salvage</a></strong> — drifting wreck-cargo is a mix of ore and commodities.</li>
+      <li><strong style="color:var(--white)">Production Array</strong> — a station upgrade that converts raw and refined materials into commodities using preset recipes. See below.</li>
+      <li><strong style="color:var(--white)">Shop tab</strong> — Fresh Produce, Food Rations, Medical Supplies, Recycled Materials, and Waste Containers can be bought directly at any station you own, at the current market price.</li>
     </ul>
+
+    <h2>Production Array</h2>
+    <p>The Production Array is a station upgrade (ƒ50,000) that converts materials and refined materials into trade commodities. Queue a recipe from the station's Upgrades tab — it consumes inputs from local storage and delivers the output when the run completes. Processing time follows the same tier rate as the Refinery: common inputs are fastest, rare are slowest.</p>
+
+    <h3>Raw Material Recipes</h3>
+    <table class="wiki-table">
+      <thead><tr><th>Input</th><th>Output</th><th>Input Value</th><th>Output Value</th></tr></thead>
+      <tbody>
+        <tr><td>1 SU Ice</td><td>10× Potable Water</td><td>ƒ2,000</td><td>ƒ2,500</td></tr>
+        <tr><td>1 SU Ice</td><td>4× Oxygen Canisters</td><td>ƒ2,000</td><td>ƒ2,400</td></tr>
+        <tr><td>1 SU Iron</td><td>8× Spare Parts</td><td>ƒ1,200</td><td>ƒ1,200</td></tr>
+        <tr><td>1 SU Cobalt</td><td>3× Batteries</td><td>ƒ1,200</td><td>ƒ1,200</td></tr>
+        <tr><td>1 SU Nickel</td><td>7× Consumer Goods</td><td>ƒ1,200</td><td>ƒ1,400</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Refined Material Recipes</h3>
+    <table class="wiki-table">
+      <thead><tr><th>Input</th><th>Output</th><th>Input Value</th><th>Output Value</th></tr></thead>
+      <tbody>
+        <tr><td>1 SU Liquid Hydrogen</td><td>4× Fuel Cells</td><td>ƒ2,400</td><td>ƒ2,400</td></tr>
+        <tr><td>1 SU Iron Alloy</td><td>4× Construction Components</td><td>ƒ1,440</td><td>ƒ1,800</td></tr>
+        <tr><td>1 SU Nickel Composite</td><td>2× Industrial Lubricants</td><td>ƒ1,440</td><td>ƒ1,500</td></tr>
+        <tr><td>1 SU Cobalt Plating</td><td>2× Robotics Parts</td><td>ƒ1,440</td><td>ƒ1,600</td></tr>
+        <tr><td>1 SU Rhodium Catalyst</td><td>5× Luxury Commodities</td><td>ƒ6,000</td><td>ƒ7,500</td></tr>
+        <tr><td>1 SU Iridium Core</td><td>4× Sensor Arrays</td><td>ƒ6,000</td><td>ƒ7,200</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Multi-Material Recipes</h3>
+    <table class="wiki-table">
+      <thead><tr><th>Inputs</th><th>Output</th><th>Input Value</th><th>Output Value</th></tr></thead>
+      <tbody>
+        <tr><td>1 SU Platinum Circuit + 1 SU Iridium Core</td><td>5× Electronics</td><td>ƒ12,000</td><td>ƒ12,500</td></tr>
+        <tr><td>1 SU Platinum Circuit + 1 SU Rhodium Catalyst</td><td>6× Scientific Equipment</td><td>ƒ12,000</td><td>ƒ13,200</td></tr>
+        <tr><td>2 SU Platinum Circuit + 1 SU Iridium Core</td><td>5× Quantum Processors</td><td>ƒ18,000</td><td>ƒ22,500</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      Production Array output values are based on base commodity prices. Market prices fluctuate ±30%, so actual sell value will vary.
+    </div>
   </main>
 </div>
 <script src="nav.js"></script>

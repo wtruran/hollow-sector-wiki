@@ -13,28 +13,24 @@
     <div class="page-header">
       <div class="breadcrumb"><a href="index.html">Wiki</a> / Mechanics</div>
       <h1>Market</h1>
-      <p class="subtitle">Buying and selling at every station, freight trading, supply depression, and contraband.</p>
+      <p class="subtitle">Selling mined materials, supply depression, and the price refresh cycle.</p>
     </div>
 
-    <h2>The Market Tab</h2>
-    <p>Every station has a market. At a station you own, opening it shows <strong>Storage</strong> | <strong>Market</strong> | <strong>Upgrades</strong>. At a station you don't own, you instead see <strong>Station Info</strong> | <strong>Market</strong>, and the market only opens once you reach <strong>200 reputation</strong> with the station's controlling faction.</p>
+    <h2>Station Modal Tabs</h2>
+    <p>Opening a home base or owned ship yard shows a secondary tab row: <strong>Storage</strong> | <strong>Market Rates</strong> | <strong>Upgrades</strong>.</p>
     <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
-      <li><strong style="color:var(--white)">Storage</strong> — view your inventory, run the Refinery, and load cargo onto docked freighters.</li>
-      <li><strong style="color:var(--white)">Market</strong> — buy and sell goods at this station's live prices.</li>
+      <li><strong style="color:var(--white)">Storage</strong> — view and sell your inventory, and trigger refinery runs if the station has a Refinery upgrade.</li>
+      <li><strong style="color:var(--white)">Market Rates</strong> — view current buy prices for all raw and refined materials at this station, plus the countdown to the next price refresh.</li>
       <li><strong style="color:var(--white)">Upgrades</strong> — purchase and manage station upgrades (Refinery, Drone Bay).</li>
     </ul>
 
-    <h2>Buying &amp; Selling</h2>
-    <p>The Market tab has a <strong>Buy</strong> and a <strong>Sell</strong> button. Pick quantities one unit at a time, up to 10 SU per item per order.</p>
-    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
-      <li><strong style="color:var(--white)">At a station you own</strong> — trades are instant and use local storage. Buying drops goods straight into the station's storage; selling sells from it.</li>
-      <li><strong style="color:var(--white)">At a station you don't own</strong> — you dispatch your own freighters. <strong>Buying</strong> sends them to collect the goods and haul them to a ship yard you choose. <strong>Selling</strong> loads goods from one of your yards and runs them to the market, selling on arrival. Send enough freighters to carry the order; they travel as a convoy at the slowest ship's pace.</li>
-    </ul>
-    <p>Cargo unloads into the destination yard's storage on arrival — your freighters never sit on a load.</p>
+    <h2>Selling Materials</h2>
+    <p>Mined materials are stored at your home base (or the nearest owned ship yard) automatically when a mining run completes. Open a station and go to the <strong>Storage</strong> tab to sell materials at the current market rate.</p>
 
     <h2>Market Prices</h2>
-    <p>Prices are randomised per station within a <strong>70%–130%</strong> range of each good's base value. A ƒ5,000/SU rare material sells for anywhere between ƒ3,500 and ƒ6,500 depending on the station.</p>
-    <p>Buying pushes a price <em>up</em>: every <strong>10 SU bought</strong> raises that good's price by 10% at that station — the mirror of sell-side supply depression below. Prices refresh every <strong>6 hours</strong>, which clears both effects. If the timer reaches zero while the screen is open, prices update automatically.</p>
+    <p>Prices are randomised per station within a <strong>70%–130%</strong> range of each material's base value. A ƒ5,000/CU rare material will sell for anywhere between ƒ3,500 and ƒ6,500 depending on which station you sell at.</p>
+    <p>Prices refresh every <strong>6 hours</strong>. The countdown is shown on the Market Rates tab. If the timer reaches zero while the screen is open, prices update automatically.</p>
+    <p>The Market Rates tab displays two sections: <strong>Raw Materials</strong> and <strong>Refined Materials</strong>, each showing the current live price at that station.</p>
 
     <h2>Raw Material Base Values</h2>
     <table class="wiki-table">
@@ -72,33 +68,11 @@
       <strong>Don't flood one station.</strong> Sell large hauls across multiple stations or wait for the daily sales volume reset at midnight. The reset clears all supply depression, restoring full prices.
     </div>
 
-    <h2>Trading Between Stations</h2>
-    <p>Because you can buy at one market and sell at another, price gaps are profit. Buy where a good is cheap or plentiful and ship it to a station paying more, or to one you haven't flooded with sales. Owning a <a href="shipyards.html">ship yard</a> near a lucrative market makes you the destination for buy orders and the source for sell orders.</p>
+    <h2>Ship Yards &amp; Transfer Runs</h2>
+    <p>Once you own a ship yard at a second station (see <a href="shipyards.html">Ship Yards</a>), you can transfer materials between stations using freight ships. This lets you move inventory to a station with higher prices or less supply depression.</p>
 
     <div class="callout teal">
-      Freight orders carry risk in transit, based on the value of the load — higher value convoys attract more pirate attention.
-    </div>
-
-    <h2>Contraband &amp; Smuggling</h2>
-    <p>Four illicit goods trade outside the legal market:</p>
-    <table class="wiki-table">
-      <thead><tr><th>Contraband</th><th>Base Value (ƒ/SU)</th></tr></thead>
-      <tbody>
-        <tr><td class="val">Narcotics</td><td>3,500</td></tr>
-        <tr><td class="val">Munitions</td><td>4,000</td></tr>
-        <tr><td class="val">Biological Goods</td><td>4,500</td></tr>
-        <tr><td class="val">Hacked Tech</td><td>5,000</td></tr>
-      </tbody>
-    </table>
-    <ul style="color:var(--teal);padding-left:20px;margin:12px 0;line-height:2">
-      <li>Bought <strong>only at The Market</strong>, the Eclipse Syndicate's black-market station.</li>
-      <li>Sold at <strong>any</strong> station for a premium.</li>
-      <li>The price <strong>never falls</strong> — it only climbs as you buy, and resets at the next market refresh.</li>
-    </ul>
-    <p>Every station has a <strong>Security</strong> level. Selling contraband there risks the crew being caught: the chance is <strong>Security × 10%</strong>, rolled once for the whole order. If you're caught, the contraband is seized, you pay <strong>legal fees</strong> charged as a lien, and you lose reputation with the station's faction. Cargo manifests are sealed, so the size or value of a load doesn't change the odds.</p>
-
-    <div class="callout">
-      <strong>The <a href="faction-ships.html">Shroud</a> is the only ship that beats Security.</strong> A smuggling order slips through untouched only if every freighter carrying it is a Shroud.
+      Transfer runs also carry risk. The risk is based on the total value of the transferred cargo — higher value loads attract more pirate attention.
     </div>
   </main>
 </div>

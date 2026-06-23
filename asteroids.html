@@ -10,142 +10,134 @@
 <div class="layout">
   <aside class="sidebar" id="sidebar"></aside>
   <main class="main">
-    <div class="page-header">
-      <div class="breadcrumb"><a href="index.html">Wiki</a> / Reference</div>
-      <h1>Asteroids</h1>
-      <p class="subtitle">All asteroid fields in the sector — location, materials, and risk tier.</p>
-    </div>
+    
+    
+<div class="page-header">
+  <div class="breadcrumb"><a href="index.html">Wiki</a> / Reference</div>
+  <h1>Asteroids</h1>
+  <p class="subtitle">All 100 asteroid fields — auto-generated from constants.js</p>
+</div>
 
-    <div class="callout teal">
-      Risk values shown are the <strong>range</strong> for each asteroid based on its highest-tier material. The actual risk re-rolls every 4 hours — check the asteroid popup on the map for the current live value. Asteroid positions are dynamic; all planet asteroids complete one orbit per real day, belt asteroids per 8 real days.
-    </div>
+<div class="callout teal">
+  This page is <strong>auto-generated</strong>. Run <code>npm run wiki</code> after editing asteroid data in <code>src/constants.js</code>.
+</div>
 
-    <h3>Filter</h3>
-    <div style="margin-bottom:16px;display:flex;gap:8px;flex-wrap:wrap" id="ast-filters">
-      <button class="sort-btn active" data-tier="all" onclick="filterAsteroids(this,'all')">All</button>
-      <button class="sort-btn" data-tier="common" onclick="filterAsteroids(this,'common')">Common</button>
-      <button class="sort-btn" data-tier="uncommon" onclick="filterAsteroids(this,'uncommon')">Uncommon</button>
-      <button class="sort-btn" data-tier="rare" onclick="filterAsteroids(this,'rare')">Rare</button>
-    </div>
+<div style="margin-bottom:16px;display:flex;gap:8px;flex-wrap:wrap" id="ast-filters">
+  <button class="sort-btn active" onclick="filterAsteroids(this,'all')">All (100)</button>
+  <button class="sort-btn" onclick="filterAsteroids(this,'common')">Common (26)</button>
+  <button class="sort-btn" onclick="filterAsteroids(this,'uncommon')">Uncommon (15)</button>
+  <button class="sort-btn" onclick="filterAsteroids(this,'rare')">Rare (59)</button>
+</div>
 
-    <table class="wiki-table" id="ast-table">
-      <thead>
-        <tr><th>Name</th><th>Location</th><th>Materials</th><th>Max Risk Tier</th><th>Risk Range</th></tr>
-      </thead>
-      <tbody>
-        <!-- Kepler-11b -->
-        <tr data-tier="common"><td class="val">Khepri-9</td><td>Kepler-11b</td><td>Nickel, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Pale Ember</td><td>Kepler-11b</td><td>Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Atlas Fragment</td><td>Kepler-11b</td><td>Nickel, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Obsidian Bloom</td><td>Kepler-11b</td><td>Iron, Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Meridian Rock</td><td>Kepler-11b</td><td>Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="uncommon"><td class="val">Vanta Reach</td><td>Kepler-11b</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <!-- Kepler-11c -->
-        <tr data-tier="common"><td class="val">Red Vein Alpha</td><td>Kepler-11c</td><td>Iron, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Emberfall</td><td>Kepler-11c</td><td>Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Vesper Core</td><td>Kepler-11c</td><td>Nickel, Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="uncommon"><td class="val">Nyx-44</td><td>Kepler-11c</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <tr data-tier="common"><td class="val">Pale Frontier</td><td>Kepler-11c</td><td>Cobalt, Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Eros Delta</td><td>Kepler-11c</td><td>Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <!-- Kepler-11d -->
-        <tr data-tier="common"><td class="val">Tharsis Minor</td><td>Kepler-11d</td><td>Cobalt, Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Cryo Bastion</td><td>Kepler-11d</td><td>Iron, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Iron Chapel</td><td>Kepler-11d</td><td>Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="uncommon"><td class="val">Solstice Fragment</td><td>Kepler-11d</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <tr data-tier="common"><td class="val">Black Echo</td><td>Kepler-11d</td><td>Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="uncommon"><td class="val">Darkwater Shard</td><td>Kepler-11d</td><td>Ice, Nickel</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <!-- Kepler-11e -->
-        <tr data-tier="common"><td class="val">Kestrel Fragment</td><td>Kepler-11e</td><td>Iron, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Saint Meridian</td><td>Kepler-11e</td><td>Nickel, Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="uncommon"><td class="val">Deep Lantern</td><td>Kepler-11e</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <tr data-tier="common"><td class="val">Helios Fang</td><td>Kepler-11e</td><td>Cobalt, Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Pioneer Array</td><td>Kepler-11e</td><td>Iron, Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="uncommon"><td class="val">Lazarus Drift</td><td>Kepler-11e</td><td>Ice, Cobalt</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <!-- Kepler-11f -->
-        <tr data-tier="common"><td class="val">Orpheus Minor</td><td>Kepler-11f</td><td>Iron, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Horizon Fang</td><td>Kepler-11f</td><td>Nickel, Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="uncommon"><td class="val">Cinder Husk</td><td>Kepler-11f</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <tr data-tier="common"><td class="val">Aegir Reach</td><td>Kepler-11f</td><td>Cobalt, Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Polaris Vein</td><td>Kepler-11f</td><td>Iron, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="uncommon"><td class="val">Iron Reliquary</td><td>Kepler-11f</td><td>Ice, Nickel</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <tr data-tier="common"><td class="val">Cradle Spine</td><td>Kepler-11f</td><td>Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <!-- Kepler-11g -->
-        <tr data-tier="common"><td class="val">Solbreaker</td><td>Kepler-11g</td><td>Iron, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="common"><td class="val">Chimera Beltstone</td><td>Kepler-11g</td><td>Nickel, Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="uncommon"><td class="val">Titan's Scar</td><td>Kepler-11g</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <tr data-tier="common"><td class="val">Specter Hollow</td><td>Kepler-11g</td><td>Cobalt, Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
-        <tr data-tier="uncommon"><td class="val">Titan Drift</td><td>Kepler-11g</td><td>Ice, Iron</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <!-- Thin Belt (belt1) -->
-        <tr data-tier="rare"><td class="val">Widow's Ring</td><td>Thin Belt</td><td>Ice, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Ember Wake</td><td>Thin Belt</td><td>Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Rift Halo</td><td>Thin Belt</td><td>Platinum, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Nullstone</td><td>Thin Belt</td><td>Iridium, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Veilstone</td><td>Thin Belt</td><td>Platinum, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Hollow Divide</td><td>Thin Belt</td><td>Platinum, Iridium, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Black Quarry-12</td><td>Thin Belt</td><td>Rhodium, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="uncommon"><td class="val">Shard Veil</td><td>Thin Belt</td><td>Ice, Cobalt</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <tr data-tier="rare"><td class="val">Pale Fracture</td><td>Thin Belt</td><td>Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Cinder Knot</td><td>Thin Belt</td><td>Rhodium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Obsidian Seam</td><td>Thin Belt</td><td>Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Rust Chorus</td><td>Thin Belt</td><td>Cobalt, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Fractured Lode</td><td>Thin Belt</td><td>Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="uncommon"><td class="val">Grey Knuckle</td><td>Thin Belt</td><td>Iron, Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <tr data-tier="rare"><td class="val">Void Spur</td><td>Thin Belt</td><td>Iridium, Cobalt</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Burnout Fragment</td><td>Thin Belt</td><td>Platinum, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <!-- Outer Belt (belt2) -->
-        <tr data-tier="rare"><td class="val">Dust Choir</td><td>Outer Belt</td><td>Platinum, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Obol Crater</td><td>Outer Belt</td><td>Iridium, Rhodium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Mourning Star</td><td>Outer Belt</td><td>Platinum, Iridium, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="uncommon"><td class="val">Driftglass</td><td>Outer Belt</td><td>Ice, Cobalt</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <tr data-tier="rare"><td class="val">Echo Cradle</td><td>Outer Belt</td><td>Iridium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Velorum-7</td><td>Outer Belt</td><td>Ice, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="uncommon"><td class="val">Grave Lantern</td><td>Outer Belt</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <tr data-tier="rare"><td class="val">Far Quarry</td><td>Outer Belt</td><td>Rhodium, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Coldseam</td><td>Outer Belt</td><td>Ice, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Vantablack Node</td><td>Outer Belt</td><td>Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Deep Scatter</td><td>Outer Belt</td><td>Cobalt, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Pale Exile</td><td>Outer Belt</td><td>Platinum, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Iron Shroud</td><td>Outer Belt</td><td>Iron, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Null Wake</td><td>Outer Belt</td><td>Rhodium, Platinum, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Rimstone</td><td>Outer Belt</td><td>Iridium, Cobalt</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Outer Frag-9</td><td>Outer Belt</td><td>Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Ashen Vault</td><td>Outer Belt</td><td>Rhodium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Blacktide Node</td><td>Outer Belt</td><td>Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Crestfall</td><td>Outer Belt</td><td>Platinum, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Deadrock Spur</td><td>Outer Belt</td><td>Iridium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Ebon Scatter</td><td>Outer Belt</td><td>Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Fractured Crown</td><td>Outer Belt</td><td>Ice, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Ghost Seam</td><td>Outer Belt</td><td>Platinum, Iridium, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Hollow Apex</td><td>Outer Belt</td><td>Rhodium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Iron Pall</td><td>Outer Belt</td><td>Iridium, Cobalt</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Jagged Relict</td><td>Outer Belt</td><td>Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Keening Rock</td><td>Outer Belt</td><td>Ice, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Lost Quarry</td><td>Outer Belt</td><td>Iridium, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Murk Shard</td><td>Outer Belt</td><td>Platinum, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Night Fracture</td><td>Outer Belt</td><td>Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Obsidian Drift</td><td>Outer Belt</td><td>Ice, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Phantom Lode</td><td>Outer Belt</td><td>Iridium, Platinum, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Quarry Wraith</td><td>Outer Belt</td><td>Rhodium, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Rift Ember</td><td>Outer Belt</td><td>Cobalt, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Sable Reach</td><td>Outer Belt</td><td>Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Tomb Vein</td><td>Outer Belt</td><td>Iridium, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Umbra Knoll</td><td>Outer Belt</td><td>Platinum, Rhodium, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Void Relict</td><td>Outer Belt</td><td>Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="uncommon"><td class="val">Wane Fragment</td><td>Outer Belt</td><td>Ice, Cobalt</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
-        <tr data-tier="rare"><td class="val">Xenolith Scar</td><td>Outer Belt</td><td>Iridium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Yore Drift</td><td>Outer Belt</td><td>Rhodium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Zenith Remnant</td><td>Outer Belt</td><td>Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Arc Hollow</td><td>Outer Belt</td><td>Platinum, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Briar Node</td><td>Outer Belt</td><td>Rhodium, Cobalt</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Cinder Exile</td><td>Outer Belt</td><td>Ice, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Deadfall Spur</td><td>Outer Belt</td><td>Platinum, Rhodium, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Eclipse Knuckle</td><td>Outer Belt</td><td>Iridium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-        <tr data-tier="rare"><td class="val">Fell Seam</td><td>Outer Belt</td><td>Rhodium, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
-      </tbody>
-    </table>
+<table class="wiki-table" id="ast-table">
+  <thead><tr><th>Name</th><th>Coords</th><th>Materials</th><th>Max Tier</th><th>Risk Range</th></tr></thead>
+  <tbody>
+    <tr data-tier="common"><td class="val">Khepri-9</td><td>(undefined, undefined)</td><td>Nickel, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Pale Ember</td><td>(undefined, undefined)</td><td>Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Atlas Fragment</td><td>(undefined, undefined)</td><td>Nickel, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Obsidian Bloom</td><td>(undefined, undefined)</td><td>Iron, Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Meridian Rock</td><td>(undefined, undefined)</td><td>Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="uncommon"><td class="val">Vanta Reach</td><td>(undefined, undefined)</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="common"><td class="val">Red Vein Alpha</td><td>(undefined, undefined)</td><td>Iron, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Emberfall</td><td>(undefined, undefined)</td><td>Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Vesper Core</td><td>(undefined, undefined)</td><td>Nickel, Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="uncommon"><td class="val">Nyx-44</td><td>(undefined, undefined)</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="common"><td class="val">Pale Frontier</td><td>(undefined, undefined)</td><td>Cobalt, Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Eros Delta</td><td>(undefined, undefined)</td><td>Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Tharsis Minor</td><td>(undefined, undefined)</td><td>Cobalt, Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Cryo Bastion</td><td>(undefined, undefined)</td><td>Iron, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Iron Chapel</td><td>(undefined, undefined)</td><td>Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="uncommon"><td class="val">Solstice Fragment</td><td>(undefined, undefined)</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="common"><td class="val">Black Echo</td><td>(undefined, undefined)</td><td>Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="uncommon"><td class="val">Darkwater Shard</td><td>(undefined, undefined)</td><td>Ice, Nickel</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="common"><td class="val">Kestrel Fragment</td><td>(undefined, undefined)</td><td>Iron, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Saint Meridian</td><td>(undefined, undefined)</td><td>Nickel, Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="uncommon"><td class="val">Deep Lantern</td><td>(undefined, undefined)</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="common"><td class="val">Helios Fang</td><td>(undefined, undefined)</td><td>Cobalt, Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Pioneer Array</td><td>(undefined, undefined)</td><td>Iron, Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="uncommon"><td class="val">Lazarus Drift</td><td>(undefined, undefined)</td><td>Ice, Cobalt</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="common"><td class="val">Orpheus Minor</td><td>(undefined, undefined)</td><td>Iron, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Horizon Fang</td><td>(undefined, undefined)</td><td>Nickel, Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="uncommon"><td class="val">Cinder Husk</td><td>(undefined, undefined)</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="common"><td class="val">Aegir Reach</td><td>(undefined, undefined)</td><td>Cobalt, Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Polaris Vein</td><td>(undefined, undefined)</td><td>Iron, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="uncommon"><td class="val">Iron Reliquary</td><td>(undefined, undefined)</td><td>Ice, Nickel</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="common"><td class="val">Cradle Spine</td><td>(undefined, undefined)</td><td>Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Solbreaker</td><td>(undefined, undefined)</td><td>Iron, Cobalt</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="common"><td class="val">Chimera Beltstone</td><td>(undefined, undefined)</td><td>Nickel, Iron</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="uncommon"><td class="val">Titan's Scar</td><td>(undefined, undefined)</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="common"><td class="val">Specter Hollow</td><td>(undefined, undefined)</td><td>Cobalt, Nickel</td><td><span class="badge badge-common">Common</span></td><td>0–2</td></tr>
+        <tr data-tier="uncommon"><td class="val">Titan Drift</td><td>(undefined, undefined)</td><td>Ice, Iron</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="rare"><td class="val">Widow's Ring</td><td>(undefined, undefined)</td><td>Ice, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Ember Wake</td><td>(undefined, undefined)</td><td>Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Rift Halo</td><td>(undefined, undefined)</td><td>Platinum, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Nullstone</td><td>(undefined, undefined)</td><td>Iridium, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Veilstone</td><td>(undefined, undefined)</td><td>Platinum, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Hollow Divide</td><td>(undefined, undefined)</td><td>Platinum, Iridium, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Black Quarry-12</td><td>(undefined, undefined)</td><td>Rhodium, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="uncommon"><td class="val">Shard Veil</td><td>(undefined, undefined)</td><td>Ice, Cobalt</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="rare"><td class="val">Pale Fracture</td><td>(undefined, undefined)</td><td>Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Cinder Knot</td><td>(undefined, undefined)</td><td>Rhodium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Obsidian Seam</td><td>(undefined, undefined)</td><td>Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Rust Chorus</td><td>(undefined, undefined)</td><td>Cobalt, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Fractured Lode</td><td>(undefined, undefined)</td><td>Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="uncommon"><td class="val">Grey Knuckle</td><td>(undefined, undefined)</td><td>Iron, Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="rare"><td class="val">Void Spur</td><td>(undefined, undefined)</td><td>Iridium, Cobalt</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Burnout Fragment</td><td>(undefined, undefined)</td><td>Platinum, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Dust Choir</td><td>(undefined, undefined)</td><td>Platinum, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Obol Crater</td><td>(undefined, undefined)</td><td>Iridium, Rhodium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Mourning Star</td><td>(undefined, undefined)</td><td>Platinum, Iridium, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="uncommon"><td class="val">Driftglass</td><td>(undefined, undefined)</td><td>Ice, Cobalt</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="rare"><td class="val">Echo Cradle</td><td>(undefined, undefined)</td><td>Iridium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Velorum-7</td><td>(undefined, undefined)</td><td>Ice, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="uncommon"><td class="val">Grave Lantern</td><td>(undefined, undefined)</td><td>Ice</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="rare"><td class="val">Far Quarry</td><td>(undefined, undefined)</td><td>Rhodium, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Coldseam</td><td>(undefined, undefined)</td><td>Ice, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Vantablack Node</td><td>(undefined, undefined)</td><td>Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Deep Scatter</td><td>(undefined, undefined)</td><td>Cobalt, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Pale Exile</td><td>(undefined, undefined)</td><td>Platinum, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Iron Shroud</td><td>(undefined, undefined)</td><td>Iron, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Null Wake</td><td>(undefined, undefined)</td><td>Rhodium, Platinum, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Rimstone</td><td>(undefined, undefined)</td><td>Iridium, Cobalt</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Outer Frag-9</td><td>(undefined, undefined)</td><td>Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Ashen Vault</td><td>(undefined, undefined)</td><td>Rhodium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Blacktide Node</td><td>(undefined, undefined)</td><td>Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Crestfall</td><td>(undefined, undefined)</td><td>Platinum, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Deadrock Spur</td><td>(undefined, undefined)</td><td>Iridium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Ebon Scatter</td><td>(undefined, undefined)</td><td>Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Fractured Crown</td><td>(undefined, undefined)</td><td>Ice, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Ghost Seam</td><td>(undefined, undefined)</td><td>Platinum, Iridium, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Hollow Apex</td><td>(undefined, undefined)</td><td>Rhodium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Iron Pall</td><td>(undefined, undefined)</td><td>Iridium, Cobalt</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Jagged Relict</td><td>(undefined, undefined)</td><td>Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Keening Rock</td><td>(undefined, undefined)</td><td>Ice, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Lost Quarry</td><td>(undefined, undefined)</td><td>Iridium, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Murk Shard</td><td>(undefined, undefined)</td><td>Platinum, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Night Fracture</td><td>(undefined, undefined)</td><td>Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Obsidian Drift</td><td>(undefined, undefined)</td><td>Ice, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Phantom Lode</td><td>(undefined, undefined)</td><td>Iridium, Platinum, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Quarry Wraith</td><td>(undefined, undefined)</td><td>Rhodium, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Rift Ember</td><td>(undefined, undefined)</td><td>Cobalt, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Sable Reach</td><td>(undefined, undefined)</td><td>Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Tomb Vein</td><td>(undefined, undefined)</td><td>Iridium, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Umbra Knoll</td><td>(undefined, undefined)</td><td>Platinum, Rhodium, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Void Relict</td><td>(undefined, undefined)</td><td>Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="uncommon"><td class="val">Wane Fragment</td><td>(undefined, undefined)</td><td>Ice, Cobalt</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>2–5</td></tr>
+        <tr data-tier="rare"><td class="val">Xenolith Scar</td><td>(undefined, undefined)</td><td>Iridium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Yore Drift</td><td>(undefined, undefined)</td><td>Rhodium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Zenith Remnant</td><td>(undefined, undefined)</td><td>Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Arc Hollow</td><td>(undefined, undefined)</td><td>Platinum, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Briar Node</td><td>(undefined, undefined)</td><td>Rhodium, Cobalt</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Cinder Exile</td><td>(undefined, undefined)</td><td>Ice, Rhodium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Deadfall Spur</td><td>(undefined, undefined)</td><td>Platinum, Rhodium, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Eclipse Knuckle</td><td>(undefined, undefined)</td><td>Iridium, Platinum</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+        <tr data-tier="rare"><td class="val">Fell Seam</td><td>(undefined, undefined)</td><td>Rhodium, Iridium</td><td><span class="badge badge-rare">Rare</span></td><td>6–10</td></tr>
+  </tbody>
+</table>
+
+<script src="asteroids-filter.js"></script>
   </main>
 </div>
 <script src="nav.js"></script>
-<script src="asteroids-filter.js"></script>
 </body>
 </html>

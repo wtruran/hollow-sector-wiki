@@ -10,21 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
     { label: 'Mechanics', links: [
       { href: 'jobs.html',      text: 'Jobs' },
       { href: 'risk.html',      text: 'Risk & Combat' },
-      { href: 'piracy.html',    text: 'Piracy' },
       { href: 'mining.html',    text: 'Mining' },
-      { href: 'salvage.html',   text: 'Salvage' },
       { href: 'market.html',    text: 'Market' },
-      { href: 'logistics.html', text: 'Logistics' },
-      { href: 'shipyards.html', text: 'Stations & Upgrades' },
+      { href: 'shipyards.html', text: 'Ship Yards' },
     ]},
     { label: 'Reference', links: [
-      { href: 'ships.html',         text: 'Ships' },
-      { href: 'faction-ships.html', text: 'Faction Ships' },
-      { href: 'materials.html',     text: 'Materials' },
-      { href: 'commodities.html',   text: 'Commodities' },
-      { href: 'asteroids.html',     text: 'Asteroids' },
-      { href: 'stations.html',      text: 'Stations' },
-      { href: 'factions.html',      text: 'Factions' },
+      { href: 'ships.html',     text: 'Ships' },
+      { href: 'materials.html', text: 'Materials' },
+      { href: 'asteroids.html', text: 'Asteroids' },
+      { href: 'stations.html',  text: 'Stations' },
+      { href: 'factions.html',  text: 'Factions' },
     ]},
   ];
 

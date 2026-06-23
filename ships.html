@@ -10,87 +10,62 @@
 <div class="layout">
   <aside class="sidebar" id="sidebar"></aside>
   <main class="main">
-    <div class="page-header">
-      <div class="breadcrumb"><a href="index.html">Wiki</a> / Reference</div>
-      <h1>Ships</h1>
-      <p class="subtitle">All ship models, their stats, and when to use them.</p>
-    </div>
+    
+    
+<div class="page-header">
+  <div class="breadcrumb"><a href="index.html">Wiki</a> / Reference</div>
+  <h1>Ships</h1>
+  <p class="subtitle">All ship models — auto-generated from constants.js</p>
+</div>
 
-    <div class="callout teal">
-      <strong>Speed</strong> is shown as real minutes per 100 WU — lower is faster. A speed of 10 means the ship crosses 100 WU in 10 real minutes. <strong>Upkeep</strong> is the internal rate used to calculate the maintenance fee shown when you dispatch a job — you never pay it directly. <strong>Range</strong> is the maximum one-way travel distance in WU.
-    </div>
+<div class="callout teal">
+  This page is <strong>auto-generated</strong>. Run <code>npm run wiki</code> after editing ship data in <code>src/constants.js</code>.
+</div>
 
-    <h2>Haulers</h2>
-    <p>Haulers (the SF series) carry cargo containers across the sector. Larger ships carry more SU but move slower and cost more per minute.</p>
+<h2>Freight</h2>
+<table class="wiki-table">
+  <thead><tr><th>Model</th><th>Risk Aversion</th><th>Mining Speed</th><th>Cargo (SU)</th><th>Speed (real min / 100WU)</th><th>Range (WU)</th><th>Upkeep</th><th>Cost</th><th>Type</th></tr></thead>
+  <tbody>
+    <tr><td class="val">SF1000</td><td><span class="dim">—</span></td><td><span class="dim">—</span></td><td>3</td><td>8</td><td>500</td><td>ƒ1.875/min</td><td>ƒ10,000</td><td><span class="badge badge-common">Standard</span></td></tr>
+        <tr><td class="val">SF2000</td><td><span class="dim">—</span></td><td><span class="dim">—</span></td><td>8</td><td>10</td><td>3000</td><td>ƒ1.5/min</td><td>ƒ30,000</td><td><span class="badge badge-common">Standard</span></td></tr>
+        <tr><td class="val">SF3000</td><td><span class="dim">—</span></td><td><span class="dim">—</span></td><td>15</td><td>6</td><td>9000</td><td>ƒ7.5/min</td><td>ƒ100,000</td><td><span class="badge badge-common">Standard</span></td></tr>
+        <tr><td class="val">SF4000</td><td>2</td><td><span class="dim">—</span></td><td>25</td><td>12</td><td>12500</td><td>ƒ15/min</td><td>ƒ280,000</td><td><span class="badge badge-common">Standard</span></td></tr>
+        <tr><td class="val">SFL2000</td><td><span class="dim">—</span></td><td><span class="dim">—</span></td><td>8</td><td>8</td><td>3000</td><td>ƒ4.875/min</td><td>ƒ42,000</td><td><span class="badge badge-limited">Limited</span></td></tr>
+        <tr><td class="val">SFL3000</td><td><span class="dim">—</span></td><td><span class="dim">—</span></td><td>20</td><td>6</td><td>9000</td><td>ƒ9/min</td><td>ƒ130,000</td><td><span class="badge badge-limited">Limited</span></td></tr>
+  </tbody>
+</table>
 
-    <table class="wiki-table">
-      <thead>
-        <tr>
-          <th>Model</th><th>Cargo</th><th>Speed (real min / 100 WU)</th><th>Range (WU)</th><th>Upkeep (ƒ/min)</th><th>Risk Aversion</th><th>Cost</th><th>Type</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td class="val">SF1000</td><td>3 SU</td><td>8</td><td>500</td><td>1.875</td><td class="dim">—</td><td>ƒ10,000</td><td><span class="badge badge-common">Standard</span></td></tr>
-        <tr><td class="val">SF2000</td><td>8 SU</td><td>10</td><td>3,000</td><td>3.75</td><td class="dim">—</td><td>ƒ30,000</td><td><span class="badge badge-common">Standard</span></td></tr>
-        <tr><td class="val">SF3000</td><td>15 SU</td><td>6</td><td>9,000</td><td>7.5</td><td class="dim">—</td><td>ƒ100,000</td><td><span class="badge badge-common">Standard</span></td></tr>
-        <tr><td class="val">SF4000</td><td>25 SU</td><td>12</td><td>12,500</td><td>15</td><td>2</td><td>ƒ280,000</td><td><span class="badge badge-common">Standard</span></td></tr>
-        <tr><td class="val">SFL2000</td><td>8 SU</td><td>8</td><td>3,000</td><td>4.875</td><td class="dim">—</td><td>ƒ42,000</td><td><span class="badge badge-limited">Limited</span></td></tr>
-        <tr><td class="val">SFL3000</td><td>20 SU</td><td>6</td><td>9,000</td><td>9</td><td class="dim">—</td><td>ƒ130,000</td><td><span class="badge badge-limited">Limited</span></td></tr>
-      </tbody>
-    </table>
+<h2>Fighter</h2>
+<table class="wiki-table">
+  <thead><tr><th>Model</th><th>Risk Aversion</th><th>Mining Speed</th><th>Cargo (SU)</th><th>Speed (real min / 100WU)</th><th>Range (WU)</th><th>Upkeep</th><th>Cost</th><th>Type</th></tr></thead>
+  <tbody>
+    <tr><td class="val">FX1000</td><td>2</td><td><span class="dim">—</span></td><td>—</td><td>6</td><td>500</td><td>ƒ3.75/min</td><td>ƒ5,000</td><td><span class="badge badge-common">Standard</span></td></tr>
+        <tr><td class="val">FX2000</td><td>5</td><td><span class="dim">—</span></td><td>—</td><td>4</td><td>3000</td><td>ƒ4/min</td><td>ƒ10,000</td><td><span class="badge badge-common">Standard</span></td></tr>
+        <tr><td class="val">FX3000</td><td>9</td><td><span class="dim">—</span></td><td>—</td><td>3</td><td>9000</td><td>ƒ15/min</td><td>ƒ15,000</td><td><span class="badge badge-common">Standard</span></td></tr>
+        <tr><td class="val">FX4000</td><td>15</td><td><span class="dim">—</span></td><td>—</td><td>3</td><td>12500</td><td>ƒ30/min</td><td>ƒ25,000</td><td><span class="badge badge-common">Standard</span></td></tr>
+        <tr><td class="val">FXL2000</td><td>6</td><td><span class="dim">—</span></td><td>—</td><td>4</td><td>3000</td><td>ƒ9.375/min</td><td>ƒ12,000</td><td><span class="badge badge-limited">Limited</span></td></tr>
+        <tr><td class="val">FXL3000</td><td>11</td><td><span class="dim">—</span></td><td>—</td><td>3</td><td>9000</td><td>ƒ18.75/min</td><td>ƒ20,000</td><td><span class="badge badge-limited">Limited</span></td></tr>
+  </tbody>
+</table>
 
-    <div class="callout">
-      <strong>SF4000</strong> is the only standard freighter with built-in risk aversion (2). It can partially self-defend without an escort on low-risk runs.
-    </div>
-    <div class="callout">
-      <strong>Limited freight ships</strong> (SFL series) offer larger cargo or better economics than their standard counterparts. The SFL3000 carries 20 SU — 5 more than the standard SF3000 — at only slightly higher upkeep.
-    </div>
+<h2>Mining</h2>
+<table class="wiki-table">
+  <thead><tr><th>Model</th><th>Risk Aversion</th><th>Mining Speed</th><th>Cargo (SU)</th><th>Speed (real min / 100WU)</th><th>Range (WU)</th><th>Upkeep</th><th>Cost</th><th>Type</th></tr></thead>
+  <tbody>
+    <tr><td class="val">MN1000</td><td><span class="dim">—</span></td><td>1</td><td>3</td><td>15</td><td>500</td><td>ƒ1.875/min</td><td>ƒ10,000</td><td><span class="badge badge-common">Standard</span></td></tr>
+        <tr><td class="val">MN2000</td><td><span class="dim">—</span></td><td>0.7</td><td>8</td><td>10</td><td>1800</td><td>ƒ3/min</td><td>ƒ30,000</td><td><span class="badge badge-common">Standard</span></td></tr>
+        <tr><td class="val">MN3000</td><td><span class="dim">—</span></td><td>0.4</td><td>15</td><td>5</td><td>12500</td><td>ƒ5/min</td><td>ƒ100,000</td><td><span class="badge badge-common">Standard</span></td></tr>
+        <tr><td class="val">MN4000</td><td>4</td><td>0.2</td><td>30</td><td>8</td><td>12500</td><td>ƒ10/min</td><td>ƒ280,000</td><td><span class="badge badge-common">Standard</span></td></tr>
+        <tr><td class="val">MNL2000</td><td><span class="dim">—</span></td><td>0.7</td><td>12</td><td>10</td><td>1800</td><td>ƒ4/min</td><td>ƒ50,000</td><td><span class="badge badge-limited">Limited</span></td></tr>
+        <tr><td class="val">MNL3000</td><td><span class="dim">—</span></td><td>0.4</td><td>20</td><td>5</td><td>12500</td><td>ƒ6/min</td><td>ƒ160,000</td><td><span class="badge badge-limited">Limited</span></td></tr>
+  </tbody>
+</table>
 
-    <h2>Fighters</h2>
-    <p>Fighters escort hauler and miner convoys. They reduce the attack failure chance by covering the job's risk level with their <strong>Risk Aversion</strong> stat. Multiple fighters stack their aversion.</p>
-
-    <table class="wiki-table">
-      <thead>
-        <tr><th>Model</th><th>Risk Aversion</th><th>Speed (real min / 100 WU)</th><th>Range (WU)</th><th>Upkeep (ƒ/min)</th><th>Cost</th><th>Type</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="val">FX1000</td><td>2</td><td>6</td><td>500</td><td>3.75</td><td>ƒ5,000</td><td><span class="badge badge-common">Standard</span></td></tr>
-        <tr><td class="val">FX2000</td><td>5</td><td>4</td><td>3,000</td><td>7.5</td><td>ƒ10,000</td><td><span class="badge badge-common">Standard</span></td></tr>
-        <tr><td class="val">FX3000</td><td>9</td><td>3</td><td>9,000</td><td>15</td><td>ƒ15,000</td><td><span class="badge badge-common">Standard</span></td></tr>
-        <tr><td class="val">FX4000</td><td>15</td><td>3</td><td>12,500</td><td>30</td><td>ƒ25,000</td><td><span class="badge badge-common">Standard</span></td></tr>
-        <tr><td class="val">FXL2000</td><td>6</td><td>4</td><td>3,000</td><td>9.375</td><td>ƒ12,000</td><td><span class="badge badge-limited">Limited</span></td></tr>
-        <tr><td class="val">FXL3000</td><td>11</td><td>3</td><td>9,000</td><td>18.75</td><td>ƒ20,000</td><td><span class="badge badge-limited">Limited</span></td></tr>
-      </tbody>
-    </table>
-
-    <div class="callout teal">
-      <strong>Risk Aversion stacks.</strong> Assigning an FX2000 (5) and an FX1000 (2) gives 7 total aversion — enough to fully cover a Risk 7 job with 0% failure chance (assuming no enemy danger bonus).
-    </div>
-
-    <h2>Miners</h2>
-    <p>Miners (the MN series) extract raw materials from asteroids. The MN4000 also has risk aversion, making it partially self-defending on return trips.</p>
-
-    <table class="wiki-table">
-      <thead>
-        <tr><th>Model</th><th>Cargo</th><th>Speed (real min / 100 WU)</th><th>Range (WU)</th><th>Upkeep (ƒ/min)</th><th>Mining Speed (mult)</th><th>Risk Aversion</th><th>Cost</th><th>Type</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="val">MN1000</td><td>3 SU</td><td>15</td><td>500</td><td>1.875</td><td>1.0×</td><td class="dim">—</td><td>ƒ10,000</td><td><span class="badge badge-common">Standard</span></td></tr>
-        <tr><td class="val">MN2000</td><td>8 SU</td><td>10</td><td>1,800</td><td>3.75</td><td>0.7×</td><td class="dim">—</td><td>ƒ30,000</td><td><span class="badge badge-common">Standard</span></td></tr>
-        <tr><td class="val">MN3000</td><td>15 SU</td><td>5</td><td>12,500</td><td>7.5</td><td>0.4×</td><td class="dim">—</td><td>ƒ100,000</td><td><span class="badge badge-common">Standard</span></td></tr>
-        <tr><td class="val">MN4000</td><td>30 SU</td><td>8</td><td>12,500</td><td>15</td><td>0.2×</td><td>4</td><td>ƒ280,000</td><td><span class="badge badge-common">Standard</span></td></tr>
-        <tr><td class="val">MNL2000</td><td>12 SU</td><td>10</td><td>1,800</td><td>4.875</td><td>0.7×</td><td class="dim">—</td><td>ƒ50,000</td><td><span class="badge badge-limited">Limited</span></td></tr>
-        <tr><td class="val">MNL3000</td><td>20 SU</td><td>5</td><td>12,500</td><td>9</td><td>0.4×</td><td class="dim">—</td><td>ƒ160,000</td><td><span class="badge badge-limited">Limited</span></td></tr>
-      </tbody>
-    </table>
-
-    <div class="callout">
-      <strong>Mining Speed</strong> is a multiplier applied to the base mine time per CU. A lower value means faster extraction. The MN4000 at 0.2× fills its 30 SU hold far faster than the MN1000 at 1.0×.
-    </div>
-
-    <h2>Limited Ships</h2>
-    <p>One limited ship rotates into the vendor every <strong>2 hours</strong>. Limited ships are enhanced variants of standard models with buffed stats (larger cargo for miners, higher risk aversion for fighters, better economics for freighters). They cost more but offer advantages not found on standard hulls.</p>
-    <p>The limited pool is: <code>SFL2000</code>, <code>SFL3000</code>, <code>FXL2000</code>, <code>FXL3000</code>, <code>MNL2000</code>, <code>MNL3000</code>.</p>
+<div class="callout">
+  <strong>Speed:</strong> minutes per 1MM — lower is faster.<br>
+  <strong>Mining Speed:</strong> minutes per CU extracted — lower is faster.<br>
+  <strong>Risk Aversion:</strong> stacks across escorts; must meet or exceed job risk to guarantee 0% fail chance.
+</div>
   </main>
 </div>
 <script src="nav.js"></script>

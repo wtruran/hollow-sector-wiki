@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sidebar.innerHTML = `
     <div class="sidebar-logo">
-      <h1>Hollow Sector</h1>
+      <img class="sidebar-logo-img" src="img/wordmark.svg" alt="Hollow Sector">
       <p>CEO's Guide to the Sector</p>
     </div>
     <nav class="sidebar-nav">

@@ -51,12 +51,11 @@ a:hover { color: var(--white); text-decoration: underline; }
   padding: 24px 16px 16px;
   border-bottom: 1px solid var(--line);
 }
-.sidebar-logo h1 {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--rust);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.sidebar-logo-img {
+  display: block;
+  width: 100%;
+  max-width: 190px;
+  height: auto;
 }
 .sidebar-logo p {
   font-size: 12px;

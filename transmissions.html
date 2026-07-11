@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transmissions — Hollow Sector Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Wiki</a> / Mechanics</div>
+      <h1>Transmissions</h1>
+      <p class="subtitle">Intercepted signals, encrypted secrets, and the Eclipse Syndicate stirring in the dark.</p>
+    </div>
+
+    <div class="callout">
+      <strong>You are not the only one broadcasting.</strong> Open channels carry stray transmissions across Hollow Sector. Some are gifts, some are traps, and some are the hidden pirate faction moving against the people who still live here.
+    </div>
+
+    <h2>Intercepted messages</h2>
+    <p>Your comms array pulls encrypted transmissions off open channels. The first one arrives shortly after you send out your very first ship; more surface as you play. Each one pops up as <strong>MESSAGE INTERCEPTED</strong>, where you can jump straight to its contents or file it in your <strong>Data archive</strong> for later.</p>
+    <p>The Data archive lives on the <strong>Info</strong> page and lists every message you have intercepted, decoded or not. You can reopen any of them through <em>View all data</em>.</p>
+
+    <h2>Decoding</h2>
+    <p>An encrypted message opens as a corrupted signal shown over an audio waveform. Scrub the marker across the wave and rest it on the glowing peak to charge and lock each fragment, revealing the <strong>sender</strong>, <strong>time</strong>, and <strong>message</strong> piece by piece.</p>
+    <div class="callout teal">
+      There is no tapping or holding — the marker follows your finger, and the peaks decode <strong>out of order</strong>, so you hunt around the wave rather than sliding straight across. Some transmissions arrive <strong>unencrypted</strong> and open fully readable, with no waveform to decode.
+    </div>
+    <p>Fully decode a message with a secret and an action button appears — for example, <em>View cargo location</em> flies the map straight to what it was hiding.</p>
+
+    <h2>The Eclipse Syndicate</h2>
+    <p>The <a href="factions.html">Eclipse Syndicate</a> is the sector's hidden pirate faction. Once your first transmission has arrived, the Syndicate begins to stir: roughly every hour there is a chance for a single new <strong>event</strong> to surface, whether you are actively playing or away. You will never face more than <strong>one at a time</strong>.</p>
+    <p>Events arrive as transmissions and come in three kinds. Thank-you notes, warnings, and other follow-up messages are just notifications — they never count as an event or block the next one.</p>
+
+    <h3>Abandoned cargo</h3>
+    <p>An encrypted transmission points to cargo the Syndicate cut loose near a planet. Decode it, tap <em>View cargo location</em>, and the map flies you to a pinging drop you can recover with a freighter like any other <a href="salvage.html">salvage</a>. It stays put until you go get it.</p>
+    <div class="callout">
+      Ignore the message and never decode it, and the signal degrades — the lead <strong>fades after a day</strong>, so a stack of unread coordinates can't jam up your comms.
+    </div>
+
+    <h3>Planned raid</h3>
+    <p>A decoded strike order reveals that the Syndicate is about to hit a station belonging to one of the four lawful factions. A <strong>two-hour countdown starts the moment the message arrives</strong> — time spent decoding eats into it, so a scrambled warning is a race.</p>
+    <p>Decoding marks the target on the map with a pulsing red marker showing a <strong>risk level</strong> (1–10) and the countdown. Your role is to <strong>defend</strong>: tap the marker and send <a href="ships.html">fighters</a> to hold the line.</p>
+    <div class="callout teal">
+      <strong>Arrival matters.</strong> Fighters that cannot reach the target before the countdown hits zero are not assignable — they are greyed out, with their flight time shown so you know why. Combat resolves on arrival under full <a href="piracy.html">raid rules</a>, and fighters can be lost.
+    </div>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Hold the line</strong> — you earn <strong>5 × the raid's risk</strong> in reputation with the defended faction, and its command sends a message of thanks.</li>
+      <li><strong style="color:var(--white)">Too late</strong> — if no defenders arrive in time the station falls. Its final transmission cuts off mid-sentence, as if the sender didn't make it. Any fighters still in flight turn around and come home, the maintenance already spent.</li>
+    </ul>
+
+    <h3>Call for help</h3>
+    <p>An unencrypted distress bulletin opens fully readable: a station urgently needs <strong>N units of a material within four hours</strong> and is paying a premium for it — the best price the <a href="market.html">market</a> could ever offer for that good.</p>
+    <div class="callout">
+      <strong>Any delivery counts, from any source.</strong> Freight a shipment in, transfer it from another yard, drop off a mining haul — every unit of the requested material that reaches the station adds up until you hit the total. Meet it and you are <strong>paid on the spot</strong>, with a message of thanks. Miss the deadline and someone else comes to their aid; you keep payment only for whatever you had already delivered.
+    </div>
+
+    <div class="callout teal">
+      Defending stations and answering calls builds <a href="factions.html">reputation</a> with the lawful factions — the same standing that unlocks better contracts, ships, and ship yards. The Syndicate, meanwhile, remembers who stood against it.
+    </div>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

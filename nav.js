@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { href: 'risk.html',      text: 'Risk & Combat' },
       { href: 'mining.html',    text: 'Mining' },
       { href: 'market.html',    text: 'Market' },
+      { href: 'colonies.html',  text: 'Colonies' },
       { href: 'transmissions.html', text: 'Transmissions' },
       { href: 'shipyards.html', text: 'Ship Yards' },
     ]},

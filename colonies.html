@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colonies — Hollow Sector Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Wiki</a> / Mechanics</div>
+      <h1>Colonies</h1>
+      <p class="subtitle">Settling a planet, staffing it, and shipping the sector's most valuable goods back up the elevator.</p>
+    </div>
+
+    <h2>Overview</h2>
+    <p>A colony is a permanent surface settlement on one of the six planets. It is the only place in the sector where <strong>planetary materials</strong> can be recovered, and the only place they can be refined into <strong>colony goods</strong> — the highest-value cargo in the game. Everything a colony produces reaches your wider operation through a <strong>Space Elevator Anchor</strong> in orbit.</p>
+    <p>Colonies are a late-game investment. A fully staffed one needs roughly fifteen crew, which means three Claimrunners and a substantial build-out before it produces at full rate.</p>
+
+    <div class="callout">
+      The Claimrunner is an Outer Reach reward unlocked at <strong>200 reputation</strong>. It makes a one-way voyage: the ship becomes the colony's command post and never flies again.
+    </div>
+
+    <h2>Founding a Colony</h2>
+    <ol style="color:var(--teal);padding-left:20px;margin-bottom:16px;line-height:2">
+      <li>Buy a <strong>Claimrunner</strong> from the vendor (100,000 credits plus Potable Water, Fresh Produce, and Medical Supplies).</li>
+      <li>Open the ship in your fleet and <strong>hire crew</strong> — 10,000 credits each, up to 6 per ship.</li>
+      <li>Assign a destination planet, then <strong>Designate Claim</strong> and tap a landing site on the globe.</li>
+      <li>Name the colony and launch. The voyage is one-way.</li>
+      <li>On arrival the colony appears, with the Claimrunner as its centre tile.</li>
+    </ol>
+    <p>To grow an existing colony, send another Claimrunner to the same planet and choose <strong>Reinforce</strong> instead of designating a new claim. It dissolves into the colony on arrival, adding its crew. Reinforcements carry crew only, never cargo, and a voyage that would exceed the colony's crew limit is refused before departure.</p>
+
+    <h2>Crew Roles</h2>
+    <p>Every colonist has a role, and each role can only work in certain structures. Posting crew is manual — you decide who works where, and you can move them freely at any time.</p>
+
+    <table class="wiki-table">
+      <thead><tr><th>Role</th><th>Can staff</th></tr></thead>
+      <tbody>
+        <tr><td class="val">Engineer</td><td>Power Plant, Water Extractor, Machine Shop</td></tr>
+        <tr><td class="val">Technician</td><td>Power Plant, Water Extractor, Machine Shop</td></tr>
+        <tr><td class="val">Agriculturist</td><td>Hydroponics Bay</td></tr>
+        <tr><td class="val">Medic</td><td>Medical Clinic</td></tr>
+        <tr><td class="val">Researcher</td><td>Survey Station</td></tr>
+      </tbody>
+    </table>
+    <p>Every staffable structure holds up to <strong>5 crew</strong>. All structures are stackable, so the real limits are grid space and how many people you can keep alive.</p>
+
+    <h2>Power</h2>
+    <p>Power Plants generate <strong>5 power per assigned crew</strong>, up to 25 per plant. Every structure you build draws power continuously, whether or not it is staffed.</p>
+
+    <table class="wiki-table">
+      <thead><tr><th>Structure</th><th>Power draw</th></tr></thead>
+      <tbody>
+        <tr><td class="val">Habitat Module</td><td>0</td></tr>
+        <tr><td class="val">Power Plant</td><td>0 (generates)</td></tr>
+        <tr><td class="val">Storage Depot</td><td>0</td></tr>
+        <tr><td class="val">Medical Clinic</td><td>0</td></tr>
+        <tr><td class="val">Water Extractor</td><td>1</td></tr>
+        <tr><td class="val">Hydroponics Bay</td><td>1</td></tr>
+        <tr><td class="val">Survey Station</td><td>2</td></tr>
+        <tr><td class="val">Machine Shop</td><td>3</td></tr>
+        <tr><td class="val">Space Elevator Anchor</td><td>5</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      If draw ever exceeds generation the colony <strong>browns out</strong> and every powered structure stops until you staff another plant or free up load. Watch the power meter before you build.
+    </div>
+
+    <p>While the colony runs a surplus, each Power Plant bottles <strong>1 SU of Energy per hour</strong> into colony storage. Energy sells on its own and is also an ingredient in Fusion Pellets, so over-staffing your power is a real strategic option rather than waste.</p>
+
+    <h2>Colony Health</h2>
+    <p>Each colonist needs <strong>1 water and 1 food</strong> to stay healthy. A Water Extractor produces 5 water per assigned crew; a Hydroponics Bay produces 5 food per assigned crew. There are no stockpiles — this is a live rate check.</p>
+    <p>Health is the share of your population that life support can actually sustain. If five colonists' worth of water and food is coming in and you have four people, health is 100% with room for one more. If you have ten people, health is 50%.</p>
+    <p>Because life-support workers are themselves colonists, roughly <strong>40% of your crew</strong> ends up feeding the other 60%.</p>
+
+    <h2>Sickness</h2>
+    <p>Health does not slow production directly. It drives <strong>sickness</strong> — and sick colonists stop working, which slows everything.</p>
+    <p>Once an hour the colony rolls for a new illness. At 100% health that is about <strong>one case per day</strong>; at 0% health it climbs to roughly ten. Poor health also makes new cases start more severe.</p>
+
+    <table class="wiki-table">
+      <thead><tr><th>Severity</th><th>Treatment time</th><th>Worsens after</th></tr></thead>
+      <tbody>
+        <tr><td class="val">Benign</td><td>10 minutes</td><td>2 hours</td></tr>
+        <tr><td class="val">Mild</td><td>30 minutes</td><td>3 hours</td></tr>
+        <tr><td class="val">Moderate</td><td>1 hour</td><td>4 hours</td></tr>
+        <tr><td class="val">Severe</td><td>2 hours</td><td>5 hours</td></tr>
+        <tr><td class="val">Terminal</td><td>3 hours</td><td>Death after 6 hours</td></tr>
+      </tbody>
+    </table>
+
+    <p>A sick colonist leaves their post immediately and becomes a patient. If a Medical Clinic has a free Medic, treatment starts automatically — each Medic treats <strong>one patient at a time</strong>, always taking the worst case available. A Medic already treating someone is never pulled off, so an equally severe arrival waits their turn.</p>
+    <p>With no clinic or no free Medic, illness escalates on the table above. Untreated, a case goes from onset to death in <strong>20 hours</strong>. Mild cases never clear on their own. On recovery, colonists return to the post they held before falling ill.</p>
+
+    <div class="callout">
+      Twenty hours is deliberately forgiving: a night away is survivable, but two days with no Medic on duty will cost you people.
+    </div>
+
+    <h2>Survey Stations and Recovery Drones</h2>
+    <p>Survey Stations are how planetary materials are found. Each assigned <strong>Researcher</strong> sends out a ping once an hour and can keep up to <strong>3 drones</strong> in flight at once.</p>
+    <p>Every drone rolls a material, a quantity of 1–4 SU, and a round trip of anywhere from 20 minutes to 5 hours. Drones never fail and are never lost in transit. If colony storage is full when one returns, it holds on the pad until you make room.</p>
+    <p>Posting your first Researcher fires a ping immediately, so you see the loop start straight away.</p>
+
+    <div class="callout">
+      If a Researcher falls ill, <strong>all of their drones are recalled and their cargo is lost.</strong> Other Researchers are unaffected. Keeping a Medic on duty protects your survey output as much as your people.
+    </div>
+
+    <h2>Planetary Materials</h2>
+    <p>These are recoverable only by colony drones. Every planet can yield all seven, but the odds shift with distance from the sun — inner rocky worlds lean toward silicates and salts, the cold outer worlds toward Xenon Ice and Helium-3. Chondritic Anomaly is a rare find anywhere.</p>
+
+    <table class="wiki-table">
+      <thead><tr><th>Material</th><th>Tier</th><th>Value / SU</th></tr></thead>
+      <tbody>
+        <tr><td class="val">Regolith Silicates</td><td><span class="badge badge-common">Common</span></td><td class="val">1,800</td></tr>
+        <tr><td class="val">Halide Salts</td><td><span class="badge badge-common">Common</span></td><td class="val">1,800</td></tr>
+        <tr><td class="val">Thorium Ore</td><td><span class="badge badge-uncommon">Uncommon</span></td><td class="val">3,000</td></tr>
+        <tr><td class="val">Helium-3 Clathrate</td><td><span class="badge badge-uncommon">Uncommon</span></td><td class="val">3,500</td></tr>
+        <tr><td class="val">Xenon Ice</td><td><span class="badge badge-rare">Rare</span></td><td class="val">5,500</td></tr>
+        <tr><td class="val">Tellurium Lattice</td><td><span class="badge badge-rare">Rare</span></td><td class="val">5,500</td></tr>
+        <tr><td class="val">Chondritic Anomaly</td><td><span class="badge badge-rare">Exotic</span></td><td class="val">9,000</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The Machine Shop</h2>
+    <p>Machine Shops turn planetary raws into colony goods. Unlike refining in orbit there is <strong>no credit cost</strong> — only time, power, and crew. Each shop runs one recipe at a time, and more crew means faster batches: the base is 2 hours at one worker, so five workers finish in about 24 minutes.</p>
+    <p>A running shop keeps producing while materials last, so it goes on working while you are away.</p>
+
+    <table class="wiki-table">
+      <thead><tr><th>Good</th><th>Ingredients</th><th>Value / SU</th></tr></thead>
+      <tbody>
+        <tr><td class="val">Silicate Ceramics</td><td>Regolith Silicates ×2</td><td class="val">5,000</td></tr>
+        <tr><td class="val">Halide Reagent</td><td>Halide Salts ×2</td><td class="val">5,000</td></tr>
+        <tr><td class="val">Thorium Fuel Rod</td><td>Thorium Ore ×1 + Halide Salts ×1</td><td class="val">8,500</td></tr>
+        <tr><td class="val">Fusion Pellets</td><td>Helium-3 Clathrate ×2 + Energy ×1</td><td class="val">11,000</td></tr>
+        <tr><td class="val">Xenon Thruster Charge</td><td>Xenon Ice ×1 + Tellurium Lattice ×1</td><td class="val">14,000</td></tr>
+        <tr><td class="val">Anomaly Core</td><td>Chondritic Anomaly ×1 + Thorium Fuel Rod ×1</td><td class="val">25,000</td></tr>
+      </tbody>
+    </table>
+
+    <p>For scale: the best refined material mined from an asteroid is worth 6,000 per SU. An Anomaly Core is worth more than four times that.</p>
+
+    <h2>Getting Goods Off-World</h2>
+    <p>Build a <strong>Space Elevator Anchor</strong> to place an anchor in orbit, visible on the sector map. From the colony's cargo tab, send material up the elevator into the anchor's hold (50 SU capacity), then call a freighter from the anchor to carry it to any of your bases. The freighter charges normal maintenance for the trip.</p>
+    <p>Materials only travel <strong>upward</strong> — you cannot ship supplies down to a colony. Everything a Machine Shop consumes must be found on that planet.</p>
+
+    <h2>The Hourly Report</h2>
+    <p>Each colony files a report to your inbox covering materials found, goods crafted, illnesses, recoveries, deaths, Energy bottled, and any brownout. If you have been away for several hours, it all arrives as a <strong>single combined message</strong> rather than one per hour.</p>
+
+    <h2>Structure Reference</h2>
+    <table class="wiki-table">
+      <thead><tr><th>Structure</th><th>Cost</th><th>Crew</th><th>Effect</th></tr></thead>
+      <tbody>
+        <tr><td class="val">Habitat Module</td><td class="val">100,000</td><td>None</td><td>+24 crew limit, +30 SU storage</td></tr>
+        <tr><td class="val">Power Plant</td><td class="val">25,000</td><td>Engineer, Technician</td><td>5 power per crew, max 25</td></tr>
+        <tr><td class="val">Water Extractor</td><td class="val">25,000</td><td>Engineer, Technician</td><td>5 water per crew</td></tr>
+        <tr><td class="val">Hydroponics Bay</td><td class="val">25,000</td><td>Agriculturist</td><td>5 food per crew</td></tr>
+        <tr><td class="val">Medical Clinic</td><td class="val">50,000</td><td>Medic</td><td>Each Medic treats one patient at a time</td></tr>
+        <tr><td class="val">Machine Shop</td><td class="val">100,000</td><td>Engineer, Technician</td><td>Crafts colony goods; more crew is faster</td></tr>
+        <tr><td class="val">Storage Depot</td><td class="val">50,000</td><td>None</td><td>+300 SU storage</td></tr>
+        <tr><td class="val">Survey Station</td><td class="val">75,000</td><td>Researcher</td><td>Hourly ping, 3 drones per Researcher</td></tr>
+        <tr><td class="val">Space Elevator Anchor</td><td class="val">100,000</td><td>None</td><td>Orbital anchor for freighter pickup</td></tr>
+      </tbody>
+    </table>
+    <p>Every structure must be placed adjacent to the Claimrunner or to an existing structure, and powered structures require at least one Power Plant to exist before they can be built.</p>
+
+    <h2>Suggested Build Order</h2>
+    <ol style="color:var(--teal);padding-left:20px;margin-bottom:16px;line-height:2">
+      <li><strong>Power Plant</strong> — nothing else works without one. Staff it first.</li>
+      <li><strong>Water Extractor and Hydroponics Bay</strong> — health collapses without both.</li>
+      <li><strong>Medical Clinic</strong> — one Medic on duty prevents almost every death.</li>
+      <li><strong>Storage Depot</strong> — the base 10 SU fills almost immediately.</li>
+      <li><strong>Survey Station</strong> — start bringing materials in.</li>
+      <li><strong>Habitat Module</strong> — raise the crew limit before reinforcing.</li>
+      <li><strong>Machine Shop</strong> — convert raws into real value.</li>
+      <li><strong>Space Elevator Anchor</strong> — ship it all out.</li>
+    </ol>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

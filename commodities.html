@@ -13,7 +13,7 @@
     <div class="page-header">
       <div class="breadcrumb"><a href="index.html">Wiki</a> / Reference</div>
       <h1>Commodities</h1>
-      <p class="subtitle">The 19 trade goods that fill freight holds — and the loot you take when you raid one.</p>
+      <p class="subtitle">The 19 trade goods that fill freight holds, the loot you take when you raid one, and the four you are not supposed to be carrying.</p>
     </div>
 
     <p>Commodities are manufactured and consumer goods, distinct from the raw <a href="materials.html">materials</a> you mine. Every <a href="jobs.html">freight contract</a> is hauling one of them, and a freighter that runs a raid or recovers <a href="salvage.html">salvage</a> brings commodities home too. They are storable, stackable, and sell on the same <a href="market.html">market</a> as mined goods.</p>
@@ -59,7 +59,42 @@
       <li><strong style="color:var(--white)"><a href="salvage.html">Salvage</a></strong> — drifting wreck-cargo is a mix of ore and commodities.</li>
       <li><strong style="color:var(--white)">Production Array</strong> — a station upgrade that converts raw and refined materials into commodities using preset recipes. See below.</li>
       <li><strong style="color:var(--white)">Shop tab</strong> — Fresh Produce, Food Rations, Medical Supplies, Recycled Materials, and Waste Containers can be bought directly at any station you own, at the current market price.</li>
+      <li><strong style="color:var(--white)">The Market</strong> — the Eclipse Syndicate station is the only place that sells contraband. See below.</li>
     </ul>
+
+    <h2>Contraband</h2>
+    <p>Four goods never appear on a lawful station's market at any price. They are sold in one place only: <strong>The Market</strong>, the Eclipse Syndicate's station, where they are perfectly legal and openly stocked. Buy there, freight the load into lawful space, and it sells for full market value like anything else. Getting it through the dock is the entire game.</p>
+
+    <table class="wiki-table">
+      <thead><tr><th>Contraband</th><th>Base Value (ƒ/SU)</th><th>Min Price</th><th>Max Price</th></tr></thead>
+      <tbody>
+        <tr><td class="val">Hacked Tech</td><td>ƒ5,000</td><td>ƒ3,500</td><td>ƒ6,500</td></tr>
+        <tr><td class="val">Biological Goods</td><td>ƒ4,500</td><td>ƒ3,150</td><td>ƒ5,850</td></tr>
+        <tr><td class="val">Munitions</td><td>ƒ4,000</td><td>ƒ2,800</td><td>ƒ5,200</td></tr>
+        <tr><td class="val">Narcotics</td><td>ƒ3,500</td><td>ƒ2,450</td><td>ƒ4,550</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Station Security</h3>
+    <p>Every lawful station carries a <strong>Security rating from 1 to 10</strong>. Eclipse turf sits at 0 and never checks anything. Security is re-rolled across the sector every <strong>90 minutes</strong>, so a station that was worth risking this morning may not be after lunch.</p>
+
+    <h3>Interdiction</h3>
+    <p>A ship arriving at a lawful station with contraband aboard is checked <strong>once, on arrival</strong>. The odds come straight from that station's security:</p>
+
+    <div class="callout">
+      catchChance = 20% × security ÷ 5 &nbsp;&nbsp;→&nbsp;&nbsp; Security 1 = <strong>4%</strong>, Security 5 = <strong>20%</strong>, Security 10 = <strong>40%</strong>.
+    </div>
+
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Slip through</strong> — the cargo is clean from that moment on. It sells at full price with no further rolls, and contraband already sitting in your storage is never re-checked.</li>
+      <li><strong style="color:var(--white)">Get caught</strong> — the entire contraband portion of the load is seized, you are fined <strong>50% of its base value</strong> as an insurance lien, and you lose <strong>10 reputation</strong> with that station's faction.</li>
+    </ul>
+
+    <p>Only the contraband is taken. Legal cargo riding in the same hold is untouched, and the ship itself is never lost to an interdiction.</p>
+
+    <div class="callout teal">
+      <strong>The Shroud never gets checked.</strong> The Eclipse Syndicate's reward freighter, unlocked at 400 reputation, is shielded against interdiction entirely. Note that a delivery slips through untouched only if <em>every</em> freighter carrying it is a Shroud — one ordinary hull on the order and the whole load is checked as normal. See <a href="faction-ships.html">Faction Ships</a>.
+    </div>
 
     <h2>Production Array</h2>
     <p>The Production Array is a station upgrade (ƒ50,000) that converts materials and refined materials into trade commodities. Start a recipe from the station's Upgrades tab &mdash; it consumes inputs from local storage and delivers the output when the run completes. Processing time follows the same tier rate as the Refinery: common inputs are fastest, rare are slowest. <strong>An array runs one recipe at a time.</strong> While a run is live its progress bar shows what is being made and how long is left, and every other recipe reads BUSY until it finishes. Build an array at a second base if you want to produce two things at once.</p>

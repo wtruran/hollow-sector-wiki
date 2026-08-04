@@ -26,15 +26,16 @@
     <p>A Risk 5 job with escorts totalling 3 aversion has a <strong>20% failure chance</strong>. If your escorts fully cover the risk level, failure chance is 0% — the convoy is guaranteed safe.</p>
 
     <h2>Enemy Ships</h2>
-    <p>Periodically, an enemy ship spawns and travels through the sector along a randomised path. Its current position is shown on the map — highlighted so you can track it.</p>
+    <p>Enemy ships spawn out of <a href="factions.html">Eclipse Syndicate</a> space and travel through the sector along a randomised path across lawful stations. Each one's current position is shown on the map — highlighted so you can track it.</p>
+    <p><strong>Up to three enemy ships roam the sector at once.</strong> A new raider is dispatched every couple of hours until that limit is reached, so the sector stays occupied: destroying one no longer leaves you with an empty map, and the survivors keep running their own routes. Each raider is tracked separately, with its own name, route, and bounty.</p>
     <p>Enemy ships have their own <strong>risk level (1–10)</strong> and a <strong>bounty</strong> (ƒ3,000 × risk level).</p>
 
     <h3>Enemy Danger Penalty</h3>
-    <p>Each enemy ship has a <strong>danger radius</strong>. If your convoy's route passes within that radius of the enemy ship at departure time, the danger modifier activates:</p>
+    <p>Each enemy ship has a <strong>danger radius</strong>. If your convoy's route passes within that radius of <em>any</em> live enemy ship at departure time, the danger modifier activates:</p>
     <div class="callout">
       <strong>Fail chance is doubled</strong> when the route passes through an enemy's danger radius.
     </div>
-    <p>A 10% base fail chance becomes 20%. A 0% chance (fully covered by escorts) stays 0% — you cannot be attacked through a covered risk.</p>
+    <p>A 10% base fail chance becomes 20%. A 0% chance (fully covered by escorts) stays 0% — you cannot be attacked through a covered risk. The penalty does not stack: a route threatened by two raiders is still doubled, not quadrupled. With several raiders in the sector, what changes is how <em>often</em> a route is exposed, not how badly.</p>
 
     <h2>Escort Coverage</h2>
     <p>Assign fighter ships as escorts when dispatching freight or mining runs. Their <strong>Risk Aversion</strong> values stack:</p>
@@ -56,11 +57,12 @@
     </div>
 
     <h2>Bounty Hunting</h2>
-    <p>When an enemy ship is active, you can send a fighter to intercept it. Open the enemy ship's details on the map and dispatch a hunter. The fighter travels toward the enemy's projected position.</p>
-    <p>If the intercept succeeds, you collect the bounty and earn faction reputation. The bounty scales with the enemy's risk level: a Risk 10 enemy pays <strong>ƒ30,000</strong>.</p>
+    <p>When an enemy ship is active, you can send a fighter to intercept it. Tap that raider on the map to open its details and dispatch a hunter — each hunt is aimed at the specific ship you opened, so you can run several hunts at once against different raiders. The fighter travels toward that enemy's projected position.</p>
+    <p>If the intercept succeeds, you collect the bounty and earn faction reputation. The bounty scales with the enemy's risk level: a Risk 10 enemy pays <strong>ƒ30,000</strong>. Reputation rises with <em>every</em> lawful faction at once, and falls sharply with the <a href="factions.html">Eclipse Syndicate</a>.</p>
+    <p>A kill also brings a letter to your <a href="transmissions.html">Mail</a> inbox, sent by the faction holding the station the enemy was running at next — the people who were about to be on the receiving end. It names the ship you destroyed, the station that was spared, and the bounty paid. If your own <strong>Base Defense</strong> grid made the kill rather than a fighter you sent, the note instead comes from the faction you joined, since no pilot was ever at risk.</p>
 
     <div class="callout">
-      <strong>Timing matters.</strong> Enemy ships only remain in the sector for a limited time. If your fighter arrives after the enemy has left, no bounty is collected and the fighter returns home.
+      <strong>Timing matters.</strong> Enemy ships only remain in the sector for a limited time. If your fighter arrives after that enemy has left — or after something else destroyed it — no bounty is collected and the fighter returns home.
     </div>
 
     <h2>Failure Consequences</h2>

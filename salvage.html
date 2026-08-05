@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salvage — Hollow Sector Wiki</title>
+  <title>Salvage &amp; Derelicts — Hollow Sector Wiki</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
   <main class="main">
     <div class="page-header">
       <div class="breadcrumb"><a href="index.html">Wiki</a> / Mechanics</div>
-      <h1>Salvage</h1>
+      <h1>Salvage &amp; Derelicts</h1>
       <p class="subtitle">Drifting cargo is everywhere in a dead sector — if you have the eyes to spot it and a hold to recover it.</p>
     </div>
 
@@ -45,7 +45,41 @@
     </div>
 
     <h2>Raid scatter</h2>
-    <p>When you win a <a href="piracy.html">raid</a> and your freighter's hold fills up, the overflow doesn't vanish — it's cut loose as a salvage drop right at the kill site, collectable within the same 3-hour window. Bring a second freighter, or come back for it before it disperses.</p>
+    <p>When you win a <a href="piracy.html">raid</a> and your freighter's hold fills up, the overflow doesn't vanish — it's cut loose at the kill site. If a hull survives the fight the cargo rides inside it (see below); otherwise it drifts as an ordinary drop.</p>
+
+    <h2>Derelicts</h2>
+    <p>A derelict is a whole wreck rather than loose cargo, and it holds <strong>two separate prizes</strong>. Your Salvage Scanner turns them up, decoded <a href="transmissions.html">transmissions</a> point you at them, and every raider or trade fleet you destroy leaves its hulls behind.</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">The cargo</strong> still in its hold — recovered by a freighter fitted with a <a href="research.html">Tractor Beam</a>.</li>
+      <li><strong style="color:var(--white)">The hull itself</strong> — stripped by a mining ship fitted with a <a href="research.html">Scavenger Rig</a>.</li>
+    </ul>
+    <p>Both modules are hard requirements. An unfitted ship cannot be assigned at all.</p>
+
+    <div class="callout">
+      <strong>The order matters.</strong> Cutting into a hull vents whatever is still in its hold. That is decided the moment the salvage crew <em>arrives</em>, not when you dispatch them — so a freighter already on its way can still beat them to it. The panel warns you before you commit.
+    </div>
+
+    <h3>What a hull is worth</h3>
+    <p>A wreck yields <strong>a third of the materials the ship was built from</strong>, so a tier-3 freighter is worth far more than a starter hull, plus salvage-only goods found nowhere else:</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Hull Plating</strong> — ƒ1,600/CU. The bulk yield; every wreck has it.</li>
+      <li><strong style="color:var(--white)">Damaged Components</strong> — ƒ2,600/CU.</li>
+      <li><strong style="color:var(--white)">Intact Avionics</strong> — ƒ7,500/CU. A chance per wreck, better on bigger hulls.</li>
+      <li><strong style="color:var(--white)">Xenoalloy</strong> — ƒ12,000/CU. Only from the wrecks of <a href="anomalies.html">alien ships</a>.</li>
+    </ul>
+
+    <h3>Working a wreck</h3>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Pick what you take:</strong> tick the materials you want off the manifest, or leave them all ticked and the hold fills with the most valuable first.</li>
+      <li><strong style="color:var(--white)">More than one trip:</strong> a hull too big to strip in one run keeps whatever is left for the next.</li>
+      <li><strong style="color:var(--white)">Risk:</strong> a wreck carries a threat rating from the hull that died there — a lone starter fighter is a safe picking, a destroyed fleet is not. Escorts apply as normal.</li>
+      <li><strong style="color:var(--white)">Lifespan:</strong> a wreck breaks up after about four hours — <strong>but the clock stops while your crews are working it</strong>. A wreck you keep coming back to never rots; one you ignore does.</li>
+      <li><strong style="color:var(--white)">Stripped bare:</strong> once the hull is empty the marker is gone for good.</li>
+    </ul>
+
+    <div class="callout teal">
+      Your own losses leave nothing behind. When a ship of yours is destroyed, whoever killed it took the cargo and stripped the hull — there is no wreck to go back for.
+    </div>
   </main>
 </div>
 <script src="nav.js"></script>

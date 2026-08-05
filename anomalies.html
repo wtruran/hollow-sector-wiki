@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anomalies — Hollow Sector Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Wiki</a> / Mechanics</div>
+      <h1>Anomalies</h1>
+      <p class="subtitle">Two things that happen <em>to</em> the sector rather than being dispatched by you. One is weather. The other is not.</p>
+    </div>
+
+    <p>Anomalies run on their own clocks whether you are playing or away. You cannot start one, and neither can anybody else.</p>
+
+    <h2>Solar flares</h2>
+    <p>The sun throws off an arc of plasma that expands outward across the sector. Any ship caught inside the band <strong>stops dead</strong> while its crew brings the drives back up, and writes to tell you.</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">One at a time</strong>, rolled each real hour.</li>
+      <li><strong style="color:var(--white)">Speed:</strong> it travels at the pace of the fastest hull in the game, so nothing outruns it head-on.</li>
+      <li><strong style="color:var(--white)">Everyone is affected:</strong> your ships, ambient trade convoys, and raiders alike.</li>
+      <li><strong style="color:var(--white)">Docked ships are safe.</strong> Stations are shielded.</li>
+    </ul>
+
+    <h3>How long you lose</h3>
+    <p>The delay depends on how close to the sun you are caught, and <strong>the way a flare looks tells you what it will cost</strong>:</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Close in (≤500 WU):</strong> 25 minutes. Bright, tight, and dangerous.</li>
+      <li><strong style="color:var(--white)">Mid-system (4,000 WU):</strong> 5 minutes.</li>
+      <li><strong style="color:var(--white)">Out at the belt (5,800 WU):</strong> 2 minutes, and by then it is barely visible.</li>
+    </ul>
+    <div class="callout teal">
+      A flare fades as it expands, so a faint wide arch really is almost harmless and a bright narrow one really will cost you twenty-five minutes. The dimness is the readout.
+    </div>
+    <p>A stalled ship always gets clear — a flare can never catch the same ship twice, because it always travels further than the band is thick during even the shortest stall. Nothing is lost but time: accepted contracts carry no deadline, so a delayed run simply arrives later.</p>
+
+    <h3>Two side effects</h3>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">The Perihelion drinks it.</strong> A solar platform does not stall in a flare — production <strong>triples</strong> while the wash is over it. The hazard everything else dreads is the one thing that hull was built to sit in.</li>
+      <li><strong style="color:var(--white)">Scanners go blind.</strong> A station under a flare loses its Cargo Scanner and Salvage Scanner until it passes.</li>
+    </ul>
+
+    <h2>Alien wormholes</h2>
+    <p>A spiral tear opens in empty space, well away from any station, and holds itself open for <strong>two hours</strong>. Every fifteen minutes, something comes out.</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Rolled every three hours.</strong> Normally one; rarely, two open at once.</li>
+      <li><strong style="color:var(--white)">Placement:</strong> at least 600 WU from any planet, so nothing can drift into it during its life. It sits deliberately between things.</li>
+      <li><strong style="color:var(--white)">It does not orbit</strong> — a fixed point, turning slowly, then gone. It leaves no trace.</li>
+    </ul>
+
+    <h3>What comes through</h3>
+    <p>Alien ships, threat <strong>1 to 5</strong>, drawn in a purple you will not see anywhere else in the sector. They hunt <strong>freighters</strong> — yours and everyone else's — and they run down anything slower than they are, which is every freighter in the game.</p>
+    <div class="callout">
+      <strong>They only take prey weaker than themselves.</strong> An alien compares its own threat against the combined combat strength of a convoy, escorts included, and ignores anything that meets or beats it. A fighter flying alongside a hauler is no longer decoration.
+    </div>
+    <p>With nothing vulnerable in flight they drift through open space searching, and will turn the moment something soft leaves dock. If one reaches its target, that ship is lost the same way a pirate ambush loses it — and <a href="research.html">Ablative Armour</a> still saves its share of the cargo.</p>
+    <p>When they take somebody else's convoy you will hear the distress call. It is not addressed to you.</p>
+
+    <h3>Fighting them</h3>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Send fighters</strong>, the same as a bounty. Combined combat strength against the target's threat.</li>
+      <li><strong style="color:var(--white)">Base Defense engages them too</strong>, and pays the same bounty.</li>
+      <li><strong style="color:var(--white)">Saving a trade convoy</strong> earns <strong>+10 reputation</strong> with that faction, and a letter from the people you saved.</li>
+      <li><strong style="color:var(--white)">Saving your own ship</strong> is its own reward.</li>
+      <li><strong style="color:var(--white)">Every kill leaves a hull</strong> carrying <a href="salvage.html">Xenoalloy</a>, which exists nowhere else.</li>
+    </ul>
+
+    <h3>Closing the tear</h3>
+    <p>You can send a squadron at the wormhole itself. It rates <strong>threat 25</strong> — the best fighter in the game is worth 15, so this needs a real formation and a failed attempt loses the ships.</p>
+    <div class="callout teal">
+      Close one and <strong>every faction in the sector thanks you — including the Eclipse Syndicate</strong>. It is the only thing they all agree on. Anything already through is cut off from home and withdraws.
+    </div>
+    <p>Aliens already in the sector do <em>not</em> vanish when the tear seals on its own. Waiting it out is not a strategy; the threat tails off in its own time.</p>
+  </main>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

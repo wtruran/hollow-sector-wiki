@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
       { href: 'mining.html',    text: 'Mining' },
       { href: 'market.html',    text: 'Market' },
       { href: 'colonies.html',  text: 'Colonies' },
+      { href: 'research.html',  text: 'Research' },
+      { href: 'salvage.html',   text: 'Salvage & Derelicts' },
+      { href: 'anomalies.html', text: 'Anomalies' },
+      { href: 'piracy.html',    text: 'Piracy' },
+      { href: 'logistics.html', text: 'Logistics' },
       { href: 'transmissions.html', text: 'Transmissions' },
       { href: 'shipyards.html', text: 'Ship Yards' },
     ]},
@@ -23,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { href: 'asteroids.html',   text: 'Asteroids' },
       { href: 'stations.html',    text: 'Stations' },
       { href: 'factions.html',    text: 'Factions' },
+      { href: 'faction-ships.html', text: 'Faction Ships' },
     ]},
   ];
 

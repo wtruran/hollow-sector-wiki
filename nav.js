@@ -49,4 +49,43 @@ document.addEventListener('DOMContentLoaded', () => {
       `).join('')}
     </nav>
   `;
+
+  // ── Mobile: top bar + hamburger drawer ──
+  const topbar = document.createElement('div');
+  topbar.className = 'mobile-topbar';
+  topbar.innerHTML = `
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <img class="mobile-logo-img" src="img/wordmark.svg" alt="Hollow Sector">
+  `;
+  const backdrop = document.createElement('div');
+  backdrop.className = 'sidebar-backdrop';
+  document.body.insertBefore(topbar, document.body.firstChild);
+  document.body.appendChild(backdrop);
+
+  const hamburger = topbar.querySelector('.hamburger');
+  const open = () => {
+    sidebar.classList.add('open');
+    backdrop.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+  };
+  const close = () => {
+    sidebar.classList.remove('open');
+    backdrop.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  };
+  hamburger.addEventListener('click', () =>
+    sidebar.classList.contains('open') ? close() : open());
+  backdrop.addEventListener('click', close);
+  sidebar.addEventListener('click', e => { if (e.target.closest('a')) close(); });
+
+  // ── Wrap wide tables so they scroll instead of overflowing the page ──
+  document.querySelectorAll('.wiki-table').forEach(table => {
+    if (table.parentElement.classList.contains('table-scroll')) return;
+    const wrap = document.createElement('div');
+    wrap.className = 'table-scroll';
+    table.parentNode.insertBefore(wrap, table);
+    wrap.appendChild(table);
+  });
 });

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ]},
     { label: 'Mechanics', links: [
       { href: 'jobs.html',      text: 'Jobs' },
+      { href: 'crew.html',      text: 'Crew & Pilots' },
       { href: 'risk.html',      text: 'Risk & Combat' },
       { href: 'mining.html',    text: 'Mining' },
       { href: 'market.html',    text: 'Market' },

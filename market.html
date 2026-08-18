@@ -13,15 +13,15 @@
     <div class="page-header">
       <div class="breadcrumb"><a href="index.html">Wiki</a> / Mechanics</div>
       <h1>Market</h1>
-      <p class="subtitle">Selling mined materials, supply depression, and the price refresh cycle.</p>
+      <p class="subtitle">Buying and selling goods, supply-and-demand stock pricing, the transfer fee, and the refresh cycle.</p>
     </div>
 
     <h2>Station Modal Tabs</h2>
     <p>Opening a home base or owned ship yard shows a secondary tab row: <strong>Storage</strong> | <strong>Market</strong> | <strong>Shop</strong> | <strong>Upgrades</strong>.</p>
     <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
       <li><strong style="color:var(--white)">Storage</strong> — view and sell your inventory, and trigger refinery and production runs if upgrades are installed.</li>
-      <li><strong style="color:var(--white)">Market</strong> — sell goods and view current prices for all raw materials, refined materials, and commodities at this station. Prices fluctuate on the 6-hour refresh cycle.</li>
-      <li><strong style="color:var(--white)">Shop</strong> — buy Fresh Produce, Food Rations, Medical Supplies, Recycled Materials, and Waste Containers directly into local storage at the current market price. No freighter needed.</li>
+      <li><strong style="color:var(--white)">Market</strong> — buy and sell goods, and view the current price and stock of every raw material, refined material, and commodity at this station. Prices move with supply and demand and re-roll on the 6-hour refresh cycle.</li>
+      <li><strong style="color:var(--white)">Shop</strong> — buy a curated shortlist of consumer goods (Fresh Produce, Food Rations, Medical Supplies, Recycled Materials, Waste Containers) directly into local storage. Like any market buy, it charges the flat transfer fee; the Market tab can buy anything the station stocks.</li>
       <li><strong style="color:var(--white)">Upgrades</strong> — purchase and manage station upgrades (Refinery, Production Array, Drone Bay, and others).</li>
     </ul>
 
@@ -29,9 +29,9 @@
     <p>Mined materials are stored at your home base (or the nearest owned ship yard) automatically when a mining run completes. Open a station and go to the <strong>Market</strong> tab to sell materials at the current market rate.</p>
 
     <h2>Market Prices</h2>
-    <p>Prices are randomised per station within a <strong>70%–130%</strong> range of each material's base value. A ƒ5,000/CU rare material will sell for anywhere between ƒ3,500 and ƒ6,500 depending on which station you sell at.</p>
-    <p>Prices refresh every <strong>6 hours</strong>. The countdown is shown on the Market Rates tab. If the timer reaches zero while the screen is open, prices update automatically.</p>
-    <p>The Market Rates tab displays two sections: <strong>Raw Materials</strong> and <strong>Refined Materials</strong>, each showing the current live price at that station.</p>
+    <p>Each station sets a <strong>quoted base price</strong> for every good, randomised within a <strong>70%–130%</strong> range of that good's base value. A ƒ5,000/CU rare material is quoted anywhere between ƒ3,500 and ƒ6,500 depending on the station.</p>
+    <p>The price you actually pay or receive then moves with the station's <strong>stock</strong> of that good (see Supply, Demand &amp; Stock below): a well-stocked good trades near its quote, a depleted one costs more, a flooded one pays less.</p>
+    <p>Quotes and stock both refresh every <strong>6 hours</strong>. The countdown is shown on the Market tab, and each good's row lists its live price alongside how many SU are in stock. If the timer reaches zero while the screen is open, the market updates automatically.</p>
 
     <div class="callout teal">
       <strong>Four goods are missing from every lawful station's market.</strong> Narcotics, Munitions, Biological Goods and Hacked Tech are sold only at <strong>The Market</strong>, the Eclipse Syndicate's station, and hauling them into lawful space means running the interdiction check at the far dock. See <a href="commodities.html">Contraband &amp; Smuggling</a>.
@@ -66,11 +66,22 @@
       </tbody>
     </table>
 
-    <h2>Supply Depression</h2>
-    <p>Each time you sell a material at a station, its effective price drops. Every <strong>10 SU sold</strong> reduces the price by 10% at that station. At 100 SU sold, the price reaches zero.</p>
+    <h2>Buying from the Market</h2>
+    <p>The Market tab lets you <strong>buy</strong> as well as sell. Buying is available at any station where you hold storage (your home base or a ship yard you own), and purchases land straight in that station's storage. Every buy carries a flat <strong>ƒ1,000 transfer fee</strong>, shown on its own line before you confirm.</p>
+    <p>You can only buy what a station has in stock. Buying draws that stock down and pushes the price up as demand rises, and the buy price always sits a little above the sell price, so selling into a market and immediately buying back is always a loss.</p>
+    <div class="callout teal">
+      <strong>Contraband is stocked only at The Market.</strong> Narcotics, Munitions, Biological Goods and Hacked Tech can be bought only at The Market, the Eclipse Syndicate's station. Selling them at a lawful station never adds them to that station's buy stock.
+    </div>
 
+    <h2>Supply, Demand &amp; Stock</h2>
+    <p>Every good at every station carries a finite <strong>stock</strong>. Rarer, pricier goods are stocked in smaller amounts: common ore runs to a few hundred SU, while a rare material may hold only a couple of dozen. Stock is the single supply-and-demand number that drives the price:</p>
+    <ul style="color:var(--teal);padding-left:20px;margin-bottom:12px;line-height:2">
+      <li><strong style="color:var(--white)">Selling floods the market.</strong> Each unit you sell raises the stock and lowers the price, so dumping a huge haul at one station pays less and less per unit.</li>
+      <li><strong style="color:var(--white)">Buying drains the market.</strong> Each unit you buy lowers the stock and raises the price, so buying out a scarce good gets steadily more expensive.</li>
+      <li><strong style="color:var(--white)">Scarcity swings harder.</strong> Because a rare good holds far less stock, its price reacts much more sharply to a single trade than a common one does.</li>
+    </ul>
     <div class="callout">
-      <strong>Don't flood one station.</strong> Sell large hauls across multiple stations or wait for the daily sales volume reset at midnight. The reset clears all supply depression, restoring full prices.
+      <strong>Don't flood one station.</strong> Spread large hauls across several markets, or wait for the 6-hour refresh, which re-rolls every station's stock and restores prices toward their quotes.
     </div>
 
     <h2>Ship Yards &amp; Transfer Runs</h2>
